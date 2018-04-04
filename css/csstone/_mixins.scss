@@ -1,0 +1,56 @@
+@mixin border_radius($radius) {
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	-ms-border-radius: $radius;
+	border-radius: $radius;
+}
+
+@mixin background_clip($value) {
+	-webkit-background-clip: $value;
+	-moz-background-clip: $value;
+	-ms-background-clip: $value;
+	background-clip: $value;
+}
+
+@mixin transitions($object, $time, $type) {
+	-webkit-transition: $object $time $type;
+	-moz-transition: $object $time $type;
+	-ms-transition: $object $time $type;
+	transition: $object $time $type;
+}
+
+@mixin appearance($value) {
+   -webkit-appearance: $value;
+   -moz-appearance: $value;
+   appearance: $value;
+}
+
+@mixin transform($type, $value) {
+	-webkit-transform: $type($value);
+	-moz-transform: $type($value);
+	-ms-transform: $type($value);
+	transform: $type($value);
+}
+
+/* legacy mixins, all have been replaced with more advanced versions. please use mixins that exist above this line */
+
+@mixin transition($time) {
+	-webkit-transition: all $time linear;
+	-moz-transition: all $time linear;
+	-ms-transition: all $time linear;
+	transition: all $time linear;
+}
+
+@mixin transform_skewy($deg) {
+	-webkit-transform: skewY($deg);
+	-moz-transform: skewY($deg);
+	-ms-transform: skewY($deg);
+	transform: skewY($deg);
+}
+
+@mixin transform_rotate($deg) {
+	-webkit-transform: rotate($deg);
+	-moz-transform: rotate($deg);
+	-ms-transform: rotate($deg);
+	transform: rotate($deg);
+}
