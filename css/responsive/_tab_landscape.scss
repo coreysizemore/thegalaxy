@@ -64,25 +64,6 @@
 	
 	/* content */
 	
-	.content.callout {
-		p {
-			margin-bottom: 60px;
-		}
-	}
-	
-	.content {
-		form {
-			margin-bottom: 60px;
-		}
-	}
-	
-	#resources {
-	
-		.resources_wrapper {
-			height: 200px;	
-		}
-	}
-	
 	/* search */
 	
 	#page_searchform {
@@ -106,28 +87,6 @@
 	
 	.parallax {
 		display: none;
-/*
-		height: 250px;
-		@include width_bg_img('../img/parallax_mobile.jpg');
-		
-		.filter {
-			
-			.testimonials-widget blockquote p,
-			.credit .author {
-				width: 300px;
-			}
-			
-			.testimonials-widget {
-				
-				blockquote {
-					
-					p {
-						padding-top: 80px;
-					}
-				}
-			}
-		}
-*/
 	}
 	
 	/* appointment */

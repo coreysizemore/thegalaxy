@@ -90,24 +90,20 @@
 		display: block;
 	}
 	
-	/* content */
+	/* call out boxes */
 	
-	.content.callout {
-		p {
-			margin-bottom: 60px;
-		}
-	}
-	
-	.content {
-		form {
-			margin-bottom: 60px;
-		}
-	}
-	
-	#resources {
-	
-		.resources_wrapper {
-			width: calc(50% - 10px);
+	.call_out_boxes {
+		.cob_1,
+		.cob_2,
+		.cob_3,
+		.cob_4,
+		.cob_5,
+		.cob_6 {
+			width: 50%;
+			
+			.call_out_boxes_item {
+				margin-bottom: 20px;
+			}
 		}
 	}
 	

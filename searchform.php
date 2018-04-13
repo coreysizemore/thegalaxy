@@ -7,7 +7,31 @@
 	 
 ?>
 
-<a href="#" id="searchopen"><span class="icon icon-search"></span></a>
+<?php
+		
+	if( get_field('search_location', 'options') == 'topright' ):
+		
+	echo '<a href="#" id="searchopen" class="search_top_right">';
+		
+	elseif( get_field('search_location', 'options') == 'topleft' ):
+		
+	echo '<a href="#" id="searchopen" class="search_top_left">';
+		
+	elseif( get_field('search_location', 'options') == 'bottomright' ):
+		
+	echo '<a href="#" id="searchopen" class="search_bottom_right">';
+		
+	elseif( get_field('search_location', 'options') == 'bottomleft' ):
+		
+	echo '<a href="#" id="searchopen" class="search_bottom_left">';
+		
+	endif;
+		
+?>
+	
+	<span class="icon icon-search"></span>
+	
+</a>
 
 <div id="search">
 

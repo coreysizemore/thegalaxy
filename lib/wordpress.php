@@ -39,7 +39,8 @@
 	  register_nav_menus(
 	    array(
 	      'primary_nav' => __( 'Primary' ),
-	      'home_page_nav' => __( 'Home Page' )
+	      'secondary_nav' => __( 'Secondary' ),
+	      'home_page_nav' => __( 'Home/Slideshow' )
 	    )
 	  );
 	}

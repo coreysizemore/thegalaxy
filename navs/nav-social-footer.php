@@ -11,11 +11,11 @@
 	
 	<?php
 						
-		if( have_rows('office_information', 'options') ):
+		if( have_rows('business_information', 'options') ):
 							
 		echo '<ul class="social_info">';
 					
-			while ( have_rows('office_information', 'options') ) : the_row();
+			while ( have_rows('business_information', 'options') ) : the_row();
 								
 				while ( have_rows('social_accounts', 'options') ) : the_row();
 							

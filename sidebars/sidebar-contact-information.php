@@ -29,13 +29,53 @@
 	
 <?php elseif ( get_field('display_top_bar', 'options') ): ?>
 
-	<div id="contact_information">
+	<?php
+		
+		if( get_field('navigation_location', 'options') == 'top' ):
+		
+		echo '<div id="contact_information" class="top_navigation">';
+		
+		elseif( get_field('navigation_location', 'options') == 'bottom' ):
+		
+		echo '<div id="contact_information" class="bottom_navigation">';
+		
+		elseif( get_field('navigation_location', 'options') == 'left' ):
+		
+		echo '<div id="contact_information" class="left_navigation">';
+		
+		elseif( get_field('navigation_location', 'options') == 'right' ):
+		
+		echo '<div id="contact_information" class="right_navigation">';
+		
+		endif;
+		
+	?>
 		
 		<div class="container">
 			
 			<div class="row gutters">
 				
-				<div class="col_9 first">
+				<?php
+		
+					if( get_field('header_social_location', 'options') == 'both' ):
+					
+					echo '<div class="col_9">';
+					
+					elseif( get_field('header_social_location', 'options') == 'topbar' ):
+					
+					echo '<div class="col_9">';
+					
+					elseif( get_field('header_social_location', 'options') == 'mainbar' ):
+					
+					echo '<div class="col_12">';
+					
+					elseif( get_field('header_social_location', 'options') == 'none' ):
+					
+					echo '<div class="col_12">';
+					
+					endif;
+					
+				?>
 					
 					<div>
 					
@@ -117,11 +157,35 @@
 				
 				</div>
 				
-				<div class="col_3 last">
+				<?php
+		
+					if( get_field('header_social_location', 'options') == 'both' ):
 					
-					<?php get_template_part( 'navs/nav', 'social' ); ?>
+					echo '<div class="col_3">';
 					
-				</div>
+					echo get_template_part( 'navs/nav', 'social' );
+					
+					echo '</div>';
+					
+					elseif( get_field('header_social_location', 'options') == 'topbar' ):
+					
+					echo '<div class="col_3">';
+					
+					echo get_template_part( 'navs/nav', 'social' );
+					
+					echo '</div>';
+					
+					elseif( get_field('header_social_location', 'options') == 'mainbar' ):
+					
+					// output nothing
+					
+					elseif( get_field('header_social_location', 'options') == 'none' ):
+					
+					// output nothing
+					
+					endif;
+					
+				?>
 				
 			</div>
 			

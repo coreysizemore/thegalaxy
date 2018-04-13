@@ -7,6 +7,26 @@
 	 
 ?>
 
+<?php
+	
+	if ( has_nav_menu( 'secondary_nav' ) ):
+	
+    	echo get_template_part( 'navs/nav', 'secondary' );
+    	    	
+    endif;
+    
+?>
+
+<?php 
+	
+	if( get_field('display_call_out_boxes') ):
+
+		get_template_part( 'misc/calloutboxes' );
+		
+	endif;
+		
+?>
+
 <div class="main <?php echo basename(get_permalink()); ?> ">
 	
 	<?php if ( function_exists('yoast_breadcrumb') ) {yoast_breadcrumb('<div class="container"><div class="row gutters"><div class="col_12"><div class="breadcrumb_wrapper"><span class="breadcrumbs">','</span></div></div></div></div>');} ?>
@@ -82,121 +102,33 @@
 	<?php endif; ?>
 	
 	<?php
-		
+	
 		if( get_field('gallery') ):
-		
-			if( have_rows('gallery_content') ):
-			
-				echo '<div class="container"><div class="row gutters"><div class="col_12"><div id="gallery">';
-						
-				while ( have_rows('gallery_content') ) : the_row();
-						        
-					echo '<div class="gallery_wrapper"><a href="';
-						        
-					the_sub_field('gallery_image');
-					
-					echo '" class="fancybox" rel="group"><div class="filter"><span class="icon icon-expand"></span></div><img src="';
-					
-					the_sub_field('gallery_image');
-						
-					echo '" alt="gallery image" /></a></div>';
-						
-				endwhile;
-					
-				echo '</div></div></div></div>';
-							
-			else :
-				
-			endif;
+	
+			get_template_part( 'misc/gallery' );
 			
 		endif;
-		
+			
 	?>
 	
-	<?php
+	<?php 
 		
 		if( get_field('accordion') ):
-		
-			if( have_rows('accordion_content') ):
-			
-				echo '<div class="container"><div class="row gutters"><div class="col_12"><div id="accordion" class="content">';
-						
-				while ( have_rows('accordion_content') ) : the_row();
-						        
-					echo '<h3>';
-						        
-					the_sub_field('section_heading');
-						
-					echo '</h3>';
-						
-					echo '<div>';
-						
-					the_sub_field('section_content');
-						        
-					echo '</div>';
-						
-				endwhile;
-					
-				echo '</div></div></div></div>';
-							
-			else :
-				
-			endif;
+	
+			get_template_part( 'misc/accordion' );
 			
 		endif;
-		
+			
 	?>
-
-	<?php
+	
+	<?php 
 		
 		if( get_field('tabs') ):
-		
-			if( have_rows('tabs_content') ):
-			
-				echo '<div class="container"><div class="row gutters"><div class="col_12"><div id="tabs" class="content">';
-					
-				echo '<ul>';
-						
-				while ( have_rows('tabs_content') ) : the_row();
-						
-					echo '<li><a href="#tabs-';
-						
-					the_sub_field('section_number');
-						
-					echo '">';
-						        
-					the_sub_field('section_heading');
-						
-					echo '</a></li>';
-						
-				endwhile;
-				
-				echo '</ul>';
-					
-				while ( have_rows('tabs_content') ) : the_row();
-						
-					echo '<div id="tabs-';
-						
-					the_sub_field('section_number');
-						
-					echo '">';
-						        
-					the_sub_field('section_content');
-						
-					echo '</div>';
-						
-				endwhile;
-					
-				echo '</ul>';
-					
-				echo '</div></div></div></div>';
-							
-			else :
-				
-			endif;
+	
+			get_template_part( 'misc/tabs' );
 			
 		endif;
-		
+			
 	?>
 	
 	<?php if(is_user_logged_in()):?>
@@ -212,21 +144,7 @@
 </div>
 
 	
-<?php if( get_field('parallax_feature')): ?>
-	
-	<div class="parallax parallax-home parallax_default_image" data-stellar-background-ratio="0.15">
-			
-		<?php
-		
-			if( get_field('parallax_content') ) {
-				echo '<div class="filter">' . get_field('parallax_content') . '</div>';
-			}
-											
-		?>
-		
-	</div>
-
-<?php endif; ?>
+<?php get_template_part( 'misc/parallax' ); ?>
 
 <?php
 

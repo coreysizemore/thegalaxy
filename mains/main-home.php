@@ -9,6 +9,16 @@
 	
 <?php get_template_part( 'sidebars/sidebar' , 'announcement' ); ?>
 
+<?php 
+	
+	if( get_field('display_call_out_boxes') ):
+
+		get_template_part( 'misc/calloutboxes' );
+		
+	endif;
+		
+?>
+
 <div class="main <?php echo basename(get_permalink()); ?>">
 
 	<?php if( get_field('default_editor')): ?>
@@ -93,107 +103,37 @@
 
 </div>
 
-<?php
+<?php 
+	
+	if( get_field('gallery') ):
+
+		get_template_part( 'misc/gallery' );
+		
+	endif;
+		
+?>
+
+<?php 
 	
 	if( get_field('accordion') ):
-	
-		if( have_rows('accordion_content') ):
-		
-			echo '<div class="main"><div class="container"><div class="row gutters"><div class="col_12"><div id="accordion" class="content">';
-					
-			while ( have_rows('accordion_content') ) : the_row();
-					        
-				echo '<h3>';
-					        
-				the_sub_field('section_heading');
-					
-				echo '</h3>';
-					
-				echo '<div>';
-					
-				the_sub_field('section_content');
-					        
-				echo '</div>';
-					
-			endwhile;
-				
-			echo '</div></div></div></div></div>';
-						
-		else :
-			
-		endif;
+
+		get_template_part( 'misc/accordion' );
 		
 	endif;
-	
+		
 ?>
 
-<?php
+<?php 
 	
 	if( get_field('tabs') ):
-	
-		if( have_rows('tabs_content') ):
-		
-			echo '<div class="main"><div class="container"><div class="row gutters"><div class="col_12"><div id="tabs" class="content">';
-				
-			echo '<ul>';
-					
-			while ( have_rows('tabs_content') ) : the_row();
-					
-				echo '<li><a href="#tabs-';
-					
-				the_sub_field('section_number');
-					
-				echo '">';
-					        
-				the_sub_field('section_heading');
-					
-				echo '</a></li>';
-					
-			endwhile;
-			
-			echo '</ul>';
-				
-			while ( have_rows('tabs_content') ) : the_row();
-					
-				echo '<div id="tabs-';
-					
-				the_sub_field('section_number');
-					
-				echo '">';
-					        
-				the_sub_field('section_content');
-					
-				echo '</div>';
-					
-			endwhile;
-				
-			echo '</ul>';
-				
-			echo '</div></div></div></div></div>';
-						
-		else :
-			
-		endif;
+
+		get_template_part( 'misc/tabs' );
 		
 	endif;
-	
+		
 ?>
 
-<?php if( get_field('parallax_feature')): ?>
-	
-	<div class="parallax parallax-home parallax_default_image" data-stellar-background-ratio="0.15">
-			
-		<?php
-		
-			if( get_field('parallax_content') ) {
-				echo '<div class="filter">' . get_field('parallax_content') . '</div>';
-			}
-											
-		?>
-		
-	</div>
-
-<?php endif; ?>
+<?php get_template_part( 'misc/parallax' ); ?>
 
 <?php
 

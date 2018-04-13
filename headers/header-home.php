@@ -143,9 +143,29 @@
 
 ?>
 	
-	<?php get_template_part( 'sidebars/sidebar' , 'contact-information' ); ?>	
+	<?php get_template_part( 'sidebars/sidebar' , 'contact-information' ); ?>
 	
-	<div id="nav_bar">
+	<?php
+		
+		if( get_field('navigation_location', 'options') == 'top' ):
+		
+		echo '<div id="nav_bar" class="top_navigation">';
+		
+		elseif( get_field('navigation_location', 'options') == 'bottom' ):
+		
+		echo '<div id="nav_bar" class="bottom_navigation">';
+		
+		elseif( get_field('navigation_location', 'options') == 'left' ):
+		
+		echo '<div id="nav_bar" class="left_navigation">';
+		
+		elseif( get_field('navigation_location', 'options') == 'right' ):
+		
+		echo '<div id="nav_bar" class="right_navigation">';
+		
+		endif;
+		
+	?>
 		
 		<div class="container">
 			
@@ -157,11 +177,51 @@
 				
 				</div>
 				
-				<div class="col_9">
-				
-					<?php get_template_part( 'navs/nav', 'main' ); ?>
-				
-				</div>
+				<?php
+		
+					if( get_field('header_social_location', 'options') == 'both' ):
+					
+					echo '<div class="col_6">';
+					
+					echo get_template_part( 'navs/nav', 'main' );
+					
+					echo '</div><div class="col_3">';
+					
+					echo get_template_part( 'navs/nav', 'social' );
+					
+					echo '</div>';
+					
+					elseif( get_field('header_social_location', 'options') == 'topbar' ):
+					
+					echo '<div class="col_9">';
+					
+					echo get_template_part( 'navs/nav', 'main' );
+					
+					echo '</div>';
+					
+					elseif( get_field('header_social_location', 'options') == 'mainbar' ):
+					
+					echo '<div class="col_6">';
+					
+					echo get_template_part( 'navs/nav', 'main' );
+					
+					echo '</div><div class="col_3">';
+					
+					echo get_template_part( 'navs/nav', 'social' );
+					
+					echo '</div>';
+					
+					elseif( get_field('header_social_location', 'options') == 'none' ):
+					
+					echo '<div class="col_9">';
+					
+					echo get_template_part( 'navs/nav', 'main' );
+					
+					echo '</div>';
+					
+					endif;
+					
+				?>
 				
 			</div>
 			

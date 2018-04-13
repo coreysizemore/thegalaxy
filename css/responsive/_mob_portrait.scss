@@ -92,23 +92,27 @@
 	
 	/* content */
 	
-	.content.callout {
-		p {
-			margin-bottom: 60px;
-		}
-	}
+	/* call out boxes */
 	
-	.content {
-		form {
-			margin-bottom: 60px;
-		}
-	}
-	
-	#resources {
-		padding: 120px 20px;
-	
-		.resources_wrapper {
-			width: calc(100% - 10px);
+	.call_out_boxes {
+		.cob_1,
+		.cob_2,
+		.cob_3,
+		.cob_4,
+		.cob_5,
+		.cob_6 {
+			width: 100%;
+			
+			.call_out_boxes_item {
+				margin-bottom: 20px;
+				padding: 0px;
+			}
+			
+			&:last-child {
+				.call_out_boxes_item {
+					margin-bottom: 0px;
+				}
+			}
 		}
 	}
 	
