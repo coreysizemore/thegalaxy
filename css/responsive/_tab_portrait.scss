@@ -118,9 +118,11 @@
 	
 	/* blog */
 	
-	article.blog_preview {
-		display: block;
-		width: calc(50% - 20px);
+	.blog_home {
+		article.blog_preview {
+			display: block;
+			width: calc(50% - 20px);
+		}
 	}
 	
 	.blog_sidebars {

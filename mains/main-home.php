@@ -35,14 +35,44 @@
 								
 							<div class="content">
 					
-								<?php get_template_part( 'loops/loop', 'home' ); ?>
+								<?php get_template_part( 'loops/loop', 'page' ); ?>
+								
+								<?php
+	
+									if( get_field('gallery') ):
+								
+										get_template_part( 'misc/gallery' );
+										
+									endif;
+										
+								?>
+								
+								<?php 
+									
+									if( get_field('accordion') ):
+								
+										get_template_part( 'misc/accordion' );
+										
+									endif;
+										
+								?>
+								
+								<?php 
+									
+									if( get_field('tabs') ):
+								
+										get_template_part( 'misc/tabs' );
+										
+									endif;
+										
+								?>
 									
 							</div>
 								
 						</div>
 							
 						<div class="col_3">
-									
+								
 							<?php get_template_part( 'sidebars/sidebar' , 'primary' ); ?>
 								
 						</div>
@@ -55,7 +85,37 @@
 							
 							<div class="content">
 				
-								<?php get_template_part( 'loops/loop', 'home' ); ?>
+								<?php get_template_part( 'loops/loop', 'page' ); ?>
+								
+								<?php
+	
+									if( get_field('gallery') ):
+								
+										get_template_part( 'misc/gallery' );
+										
+									endif;
+										
+								?>
+								
+								<?php 
+									
+									if( get_field('accordion') ):
+								
+										get_template_part( 'misc/accordion' );
+										
+									endif;
+										
+								?>
+								
+								<?php 
+									
+									if( get_field('tabs') ):
+								
+										get_template_part( 'misc/tabs' );
+										
+									endif;
+										
+								?>
 								
 							</div>
 							
@@ -66,7 +126,7 @@
 					<?php if( get_field('sidebar_selection') == 'left' ): ?>
 					
 						<div class="col_3">
-	
+								
 							<?php get_template_part( 'sidebars/sidebar' , 'primary' ); ?>
 							
 						</div>
@@ -75,7 +135,37 @@
 							
 							<div class="content">
 				
-								<?php get_template_part( 'loops/loop', 'home' ); ?>
+								<?php get_template_part( 'loops/loop', 'page' ); ?>
+								
+								<?php
+	
+									if( get_field('gallery') ):
+								
+										get_template_part( 'misc/gallery' );
+										
+									endif;
+										
+								?>
+								
+								<?php 
+									
+									if( get_field('accordion') ):
+								
+										get_template_part( 'misc/accordion' );
+										
+									endif;
+										
+								?>
+								
+								<?php 
+									
+									if( get_field('tabs') ):
+								
+										get_template_part( 'misc/tabs' );
+										
+									endif;
+										
+								?>
 								
 							</div>
 							
@@ -102,36 +192,6 @@
 	<?php endif; ?>
 
 </div>
-
-<?php 
-	
-	if( get_field('gallery') ):
-
-		get_template_part( 'misc/gallery' );
-		
-	endif;
-		
-?>
-
-<?php 
-	
-	if( get_field('accordion') ):
-
-		get_template_part( 'misc/accordion' );
-		
-	endif;
-		
-?>
-
-<?php 
-	
-	if( get_field('tabs') ):
-
-		get_template_part( 'misc/tabs' );
-		
-	endif;
-		
-?>
 
 <?php get_template_part( 'misc/parallax' ); ?>
 

@@ -9,10 +9,14 @@
 
 <?php
 	
-	if ( has_nav_menu( 'secondary_nav' ) ):
+	if( get_field('secondary_navigation') ):
 	
-    	echo get_template_part( 'navs/nav', 'secondary' );
-    	    	
+		if ( has_nav_menu( 'secondary_nav' ) ):
+		
+	    	echo get_template_part( 'navs/nav', 'secondary' );
+	    	    	
+	    endif;
+    
     endif;
     
 ?>
@@ -46,6 +50,36 @@
 							<div class="content">
 					
 								<?php get_template_part( 'loops/loop', 'page' ); ?>
+								
+								<?php
+	
+									if( get_field('gallery') ):
+								
+										get_template_part( 'misc/gallery' );
+										
+									endif;
+										
+								?>
+								
+								<?php 
+									
+									if( get_field('accordion') ):
+								
+										get_template_part( 'misc/accordion' );
+										
+									endif;
+										
+								?>
+								
+								<?php 
+									
+									if( get_field('tabs') ):
+								
+										get_template_part( 'misc/tabs' );
+										
+									endif;
+										
+								?>
 									
 							</div>
 								
@@ -67,6 +101,36 @@
 				
 								<?php get_template_part( 'loops/loop', 'page' ); ?>
 								
+								<?php
+	
+									if( get_field('gallery') ):
+								
+										get_template_part( 'misc/gallery' );
+										
+									endif;
+										
+								?>
+								
+								<?php 
+									
+									if( get_field('accordion') ):
+								
+										get_template_part( 'misc/accordion' );
+										
+									endif;
+										
+								?>
+								
+								<?php 
+									
+									if( get_field('tabs') ):
+								
+										get_template_part( 'misc/tabs' );
+										
+									endif;
+										
+								?>
+								
 							</div>
 							
 						</div>
@@ -87,6 +151,36 @@
 				
 								<?php get_template_part( 'loops/loop', 'page' ); ?>
 								
+								<?php
+	
+									if( get_field('gallery') ):
+								
+										get_template_part( 'misc/gallery' );
+										
+									endif;
+										
+								?>
+								
+								<?php 
+									
+									if( get_field('accordion') ):
+								
+										get_template_part( 'misc/accordion' );
+										
+									endif;
+										
+								?>
+								
+								<?php 
+									
+									if( get_field('tabs') ):
+								
+										get_template_part( 'misc/tabs' );
+										
+									endif;
+										
+								?>
+								
 							</div>
 							
 						</div>
@@ -100,36 +194,6 @@
 		</div>
 	
 	<?php endif; ?>
-	
-	<?php
-	
-		if( get_field('gallery') ):
-	
-			get_template_part( 'misc/gallery' );
-			
-		endif;
-			
-	?>
-	
-	<?php 
-		
-		if( get_field('accordion') ):
-	
-			get_template_part( 'misc/accordion' );
-			
-		endif;
-			
-	?>
-	
-	<?php 
-		
-		if( get_field('tabs') ):
-	
-			get_template_part( 'misc/tabs' );
-			
-		endif;
-			
-	?>
 	
 	<?php if(is_user_logged_in()):?>
 	

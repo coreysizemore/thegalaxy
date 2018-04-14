@@ -2,7 +2,7 @@
 	
 	if( have_rows('tabs_content') ):
 		
-		echo '<div class="main"><div class="container"><div class="row gutters"><div class="col_12"><div id="tabs" class="content">';
+		echo '<div id="tabs" class="content">';
 				
 		echo '<ul>';
 				
@@ -38,7 +38,7 @@
 				
 		echo '</ul>';
 				
-		echo '</div></div></div></div></div>';
+		echo '</div>';
 						
 	else :
 			

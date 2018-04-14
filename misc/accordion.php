@@ -2,7 +2,7 @@
 	
 	if( have_rows('accordion_content') ):
 		
-		echo '<div class="main"><div class="container"><div class="row gutters"><div class="col_12"><div id="accordion" class="content">';
+		echo '<div id="accordion" class="content">';
 					
 		while ( have_rows('accordion_content') ) : the_row();
 					        
@@ -20,7 +20,7 @@
 					
 		endwhile;
 				
-		echo '</div></div></div></div></div>';
+		echo '</div>';
 						
 	else :
 		

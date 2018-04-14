@@ -2,7 +2,7 @@
 
 	if( have_rows('gallery_content') ):
 			
-		echo '<div class="container"><div class="row gutters"><div class="col_12"><div id="gallery">';
+		echo '<div id="gallery">';
 					
 		while ( have_rows('gallery_content') ) : the_row();
 						        
@@ -18,7 +18,7 @@
 						
 		endwhile;
 					
-		echo '</div></div></div></div>';
+		echo '</div>';
 							
 	else :
 				

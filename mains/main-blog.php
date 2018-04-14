@@ -7,7 +7,7 @@
 	 
 ?>
 
-<div class="main coloredbg <?php echo basename(get_permalink()); ?>">
+<div class="main blog_home <?php echo basename(get_permalink()); ?>">
 	
 	<?php if ( function_exists('yoast_breadcrumb') ) {yoast_breadcrumb('<div class="container"><div class="row gutters"><div class="col_12"><div class="breadcrumb_wrapper"><span class="breadcrumbs">','</span></div></div></div></div>');} ?>
 	
