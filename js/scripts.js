@@ -65,11 +65,13 @@ $(document).ready(function() {
 	
 	$('a#mobileopen').click( function() { 
 	    $('#mobile_nav').slideToggle();
+	    $('#mobileopen').hide();
 	    $('body').addClass('disablepagescroll');
 	});
 	
 	$('a#mobileclose').click( function() { 
 	    $('#mobile_nav').slideToggle();
+	    $('#mobileopen').show();
 	    $('body').removeClass('disablepagescroll');
 	});
 	

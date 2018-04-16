@@ -704,6 +704,42 @@ a#mobileclose:visited {
 	color: $light_font;
 }
 
+header.header_mobile_home,
+header.header_page_mobile {
+	.mobile_navigation_bar {
+		background: $colorone;
+		padding: 10px 0px;
+		position:relative;
+		
+		#logo_mobile {
+			img {
+				height: 50px;
+				margin-left: 10px;
+			}
+		}
+		
+		#mobileopen {
+			background: $transparent;
+			border: none;
+			color: #ffffff;
+			right: 10px;
+			top: 15px;
+		}
+	}
+}
+
+header.header_mobile_home,
+header.header_page_mobile {
+	.mobile_navigation_bar {
+		& + #mobile_nav {
+			#mobileclose {
+				right: 10px;
+				top: -58px;
+			}
+		}
+	}
+}
+
 #mobile_nav {
 	background: rgba($colorone,.9);
 	display: none;
@@ -873,6 +909,10 @@ a#mobileclose:visited {
 		
 		ul {
 			text-align: left;
+			
+			li {
+				padding: 0px 10px 0px 0px;
+			}
 		}
 	}
 }
@@ -888,12 +928,16 @@ a#mobileclose:visited {
 		
 		ul {
 			text-align: right;
+			
+			li {
+				padding: 0px 0px 0px 10px;
+			}
 		}
 	}
 }
 
 #home_logo {
-	height: 500px;
+	height: 300px;
 	left: 50%;
 	margin-left: -300px;
 	margin-top: -250px;
@@ -929,8 +973,28 @@ a#mobileclose:visited {
 			color: $light_font;
 			font-size: 18px;
 			font-weight: 500;
-			margin: 0px 20px 30px 20px;
+			margin: 0px 0px 30px 0px;
 			text-shadow: 1px 1px 2px #000000;
+		}
+		
+		.home_logo_text_wrapper {
+			h1 {
+				color: $light_font;
+				display: block;
+				font-size: 46px;
+				font-weight: 700;
+				margin-bottom: 10px;
+				text-decoration: none;
+				text-shadow: 1px 1px 2px #000000;
+			}
+			
+			h2,h3 {
+				color: $light_font;
+				font-size: 18px;
+				font-weight: 500;
+				margin: 0px 0px 30px 0px;
+				text-shadow: 1px 1px 2px #000000;
+			}
 		}
 	}
 	
@@ -941,7 +1005,7 @@ a#mobileclose:visited {
 			
 			li {
 				display: inline-block;
-				padding: 0px 10px;
+				padding: 0px 5px;
 				
 				a:link,a:visited {
 					color: $light_font;
@@ -952,6 +1016,7 @@ a#mobileclose:visited {
 					font-size: 14px;
 					font-weight: 500;
 					letter-spacing: 2px;
+					margin-bottom: 10px;
 					padding: 15px 30px;
 					text-decoration: none;
 					text-transform: uppercase;

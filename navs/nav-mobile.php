@@ -7,7 +7,25 @@
 	 
 ?>
 
-<a href="#" id="mobileopen"><span class="icon icon-menu"></span></a>
+<?php
+	
+	if( get_field('mobile_header_bar', 'options') == 'advanced' ):
+	
+		echo '<div class="mobile_navigation_bar">';
+		
+		get_template_part( 'logos/logo', 'mobile' );
+	
+	else :
+	
+		echo '<div class="mobile_navigation_button">';
+	
+	endif;
+	
+?>
+
+	<a href="#" id="mobileopen"><span class="icon icon-menu"></span></a>
+
+</div>
 
 <nav id="mobile_nav">
 	

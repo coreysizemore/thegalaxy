@@ -125,30 +125,6 @@
 	
 	<?php get_template_part( 'navs/nav', 'mobile' ); ?>
 	
-	<div id="nav_bar">
-		
-		<div class="container">
-			
-			<div class="row gutters">
-		
-				<div class="col_3">
-				
-					<?php get_template_part( 'logos/logo', 'main' ); ?>
-				
-				</div>
-				
-				<div class="col_9">
-				
-					<?php get_template_part( 'navs/nav', 'main' ); ?>
-				
-				</div>
-				
-			</div>
-			
-		</div>
-		
-	</div>
-	
 	<div id="page_title">
 		
 		<h1 class="heading"><?php csdd_the_title(); ?></h1>
