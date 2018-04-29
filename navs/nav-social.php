@@ -10,42 +10,38 @@
 <nav id="social_nav">
 	
 	<?php
-					
-		if( get_field('display_top_bar', 'options')):
 						
-			if( have_rows('business_information', 'options') ):
+		if( have_rows('business_information', 'options') ):
 							
-			echo '<ul class="social_info">';
+		echo '<ul class="social_info">';
 					
-				while ( have_rows('business_information', 'options') ) : the_row();
+			while ( have_rows('business_information', 'options') ) : the_row();
 								
-					while ( have_rows('social_accounts', 'options') ) : the_row();
+				while ( have_rows('social_accounts', 'options') ) : the_row();
 							
-						if( get_sub_field('social_url', 'options')):
+					if( get_sub_field('social_url', 'options')):
 										
-							echo '<li><a href="';
+						echo '<li><a href="';
 											
-							the_sub_field('social_url', 'options');
+						the_sub_field('social_url', 'options');
 											
-							echo '" target="_blank">';
+						echo '" target="_blank">';
 											
-							the_sub_field('social_url', 'options');
+						the_sub_field('social_url', 'options');
 											
-							echo '</a></li>';
+						echo '</a></li>';
 											
-						endif;
+					endif;
 										
-					endwhile;
-									
 				endwhile;
-								
-				echo '</ul>';
-							
-			else :
 									
-			endif;
-						
-		endif;
+			endwhile;
+								
+			echo '</ul>';
+							
+		else :
+									
+		endif;				
 						
 	?>
 	

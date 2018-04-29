@@ -158,30 +158,34 @@
 				</div>
 				
 				<?php
+					
+					if( get_field('display_top_bar', 'options')):
 		
-					if( get_field('header_social_location', 'options') == 'both' ):
-					
-					echo '<div class="col_3">';
-					
-					echo get_template_part( 'navs/nav', 'social' );
-					
-					echo '</div>';
-					
-					elseif( get_field('header_social_location', 'options') == 'topbar' ):
-					
-					echo '<div class="col_3">';
-					
-					echo get_template_part( 'navs/nav', 'social' );
-					
-					echo '</div>';
-					
-					elseif( get_field('header_social_location', 'options') == 'mainbar' ):
-					
-					// output nothing
-					
-					elseif( get_field('header_social_location', 'options') == 'none' ):
-					
-					// output nothing
+						if( get_field('header_social_location', 'options') == 'both' ):
+						
+						echo '<div class="col_3">';
+						
+						echo get_template_part( 'navs/nav', 'social' );
+						
+						echo '</div>';
+						
+						elseif( get_field('header_social_location', 'options') == 'topbar' ):
+						
+						echo '<div class="col_3">';
+						
+						echo get_template_part( 'navs/nav', 'social' );
+						
+						echo '</div>';
+						
+						elseif( get_field('header_social_location', 'options') == 'mainbar' ):
+						
+						// output nothing
+						
+						elseif( get_field('header_social_location', 'options') == 'none' ):
+						
+						// output nothing
+						
+						endif;
 					
 					endif;
 					
