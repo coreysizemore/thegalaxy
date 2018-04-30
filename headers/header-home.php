@@ -229,7 +229,7 @@
 		
 	</div>
 	
-	<?php if( get_field('home_logo','options')): ?>
+	<?php if( get_field('home_logo','options') != 'none'): ?>
 	
 		<?php if( get_field('home_logo_location', 'options') == 'left' ): ?>
 		
@@ -258,7 +258,39 @@
 			</div>
 		
 		</div>
-	
+		
+	<?php else : ?>
+			
+		<?php if ( has_nav_menu( 'home_page_nav' ) ): ?>
+		
+			<?php if( get_field('home_logo_location', 'options') == 'left' ): ?>
+		
+				<div id="home_logo" class="home_logo_left" data-stellar-ratio="0.75">
+				
+			<?php endif; ?>
+			
+			<?php if( get_field('home_logo_location', 'options') == 'center' ): ?>
+			
+				<div id="home_logo" class="home_logo_center" data-stellar-ratio="0.75">
+				
+			<?php endif; ?>
+			
+			<?php if( get_field('home_logo_location', 'options') == 'right' ): ?>
+			
+				<div id="home_logo" class="home_logo_right" data-stellar-ratio="0.75">
+				
+			<?php endif; ?>
+			
+				<div id="home_page_nav">
+					
+					<?php wp_nav_menu( array( 'theme_location' => 'home_page_nav' ) ); ?>
+					
+				</div>
+			
+			</div>
+			     
+		<?php endif; ?>
+
 	<?php endif; ?>
 	
 </header>
@@ -266,6 +298,8 @@
 <header class="header_mobile_home home_default_image">
 	
 	<?php get_template_part( 'navs/nav', 'mobile' ); ?>
+	
+	<?php if( get_field('home_logo','options') != 'none'): ?>
 	
 	<div id="home_logo">
 		
@@ -278,5 +312,23 @@
 		</div>
 	
 	</div>
+	
+	<?php else : ?>
+	
+	<?php if ( has_nav_menu( 'home_page_nav' ) ): ?>
+		
+		<div id="home_logo">
+		
+			<div id="home_page_nav">
+			
+				<?php wp_nav_menu( array( 'theme_location' => 'home_page_nav' ) ); ?>
+				
+			</div>
+			
+		</div>
+		
+		<?php endif; ?>
+	
+	<?php endif; ?>
 	
 </header>

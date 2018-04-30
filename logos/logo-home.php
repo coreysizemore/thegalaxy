@@ -9,7 +9,6 @@
 
 <div id="logo_home">
 	
-	
 	<?php if( get_field('home_logo', 'options') == 'image'): ?>
 					                
 		<?php if ( get_theme_mod( 'themeslug_logo_3' ) ) : ?>
@@ -38,7 +37,7 @@
 				    
 		<?php endif; ?>
 	
-	<?php else : ?>
+	<?php elseif( get_field('home_logo', 'options') == 'text'): ?>
 	
 		<?php if( get_field('home_logo_text', 'options')): ?>
 		
@@ -61,6 +60,10 @@
 			<?php endif; ?>
 		
 		<?php endif; ?>
+		
+	<?php else : ?>
+	
+		<!-- display nothing -->
 	
 	<?php endif; ?>
 				
