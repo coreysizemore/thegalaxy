@@ -19,9 +19,9 @@
 		
 		wp_enqueue_style( 'fancybox', get_template_directory_uri() . '/fancybox/fancybox.css' );
 		
-		wp_enqueue_script( 'latest-jquery', 'http://code.jquery.com/jquery-latest.min.js' );
+		wp_enqueue_script( 'latest-jquery', 'https://code.jquery.com/jquery-latest.min.js' );
 		
-		wp_enqueue_script( 'latest-jquery-add', 'http://code.jquery.com/ui/1.12.1/jquery-ui.min.js' );
+		wp_enqueue_script( 'latest-jquery-add', 'https://code.jquery.com/ui/1.12.1/jquery-ui.min.js' );
 		
 		wp_enqueue_script( 'scroll-fix', get_template_directory_uri() . '/js/scrollfix.min.js' );
 		
