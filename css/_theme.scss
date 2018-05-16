@@ -69,13 +69,13 @@ body {
 a#searchopen.search_top_right:link,
 a#searchopen.search_top_right:visited {
 	right: 50px;
-	top: 100px;
+	top: 50px;
 }
 
 a#searchopen.search_top_left:link,
 a#searchopen.search_top_left:visited {
 	left: 50px;
-	top: 100px;
+	top: 50px;
 }
 
 a#searchopen.search_bottom_right:link,
@@ -115,7 +115,7 @@ a#searchclose:visited {
 
 a#searchclose:link,
 a#searchclose:visited {
-	top: 40px;
+	top: 50px;
 }
 
 a#searchopen:link,
@@ -433,6 +433,13 @@ header {
 		.container {
 			overflow-x: visible;
 			overflow-y: visible;
+			
+			.col_6 {
+				nav#main_nav {
+					float: none;
+					margin: 0 auto;
+				}
+			}
 			
 			nav {
 				display:table;

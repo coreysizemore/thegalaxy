@@ -86,7 +86,7 @@
 			
 			<div class="row gutters">
 		
-				<div class="col_3">
+				<div class="col_2">
 				
 					<?php get_template_part( 'logos/logo', 'main' ); ?>
 				
@@ -96,11 +96,11 @@
 		
 					if( get_field('header_social_location', 'options') == 'both' ):
 					
-					echo '<div class="col_6">';
+					echo '<div class="col_8">';
 					
 					echo get_template_part( 'navs/nav', 'main' );
 					
-					echo '</div><div class="col_3">';
+					echo '</div><div class="col_2">';
 					
 					echo get_template_part( 'navs/nav', 'social' );
 					
@@ -108,7 +108,7 @@
 					
 					elseif( get_field('header_social_location', 'options') == 'topbar' ):
 					
-					echo '<div class="col_9">';
+					echo '<div class="col_10">';
 					
 					echo get_template_part( 'navs/nav', 'main' );
 					
@@ -116,11 +116,11 @@
 					
 					elseif( get_field('header_social_location', 'options') == 'mainbar' ):
 					
-					echo '<div class="col_6">';
+					echo '<div class="col_8">';
 					
 					echo get_template_part( 'navs/nav', 'main' );
 					
-					echo '</div><div class="col_3">';
+					echo '</div><div class="col_2">';
 					
 					echo get_template_part( 'navs/nav', 'social' );
 					
@@ -128,7 +128,7 @@
 					
 					elseif( get_field('header_social_location', 'options') == 'none' ):
 					
-					echo '<div class="col_9">';
+					echo '<div class="col_10">';
 					
 					echo get_template_part( 'navs/nav', 'main' );
 					

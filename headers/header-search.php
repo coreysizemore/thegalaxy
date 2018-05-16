@@ -85,17 +85,57 @@
 			
 			<div class="row gutters">
 		
-				<div class="col_3">
+				<div class="col_2">
 				
 					<?php get_template_part( 'logos/logo', 'main' ); ?>
 				
 				</div>
 				
-				<div class="col_9">
-				
-					<?php get_template_part( 'navs/nav', 'main' ); ?>
-				
-				</div>
+				<?php
+		
+					if( get_field('header_social_location', 'options') == 'both' ):
+					
+					echo '<div class="col_8">';
+					
+					echo get_template_part( 'navs/nav', 'main' );
+					
+					echo '</div><div class="col_2">';
+					
+					echo get_template_part( 'navs/nav', 'social' );
+					
+					echo '</div>';
+					
+					elseif( get_field('header_social_location', 'options') == 'topbar' ):
+					
+					echo '<div class="col_10">';
+					
+					echo get_template_part( 'navs/nav', 'main' );
+					
+					echo '</div>';
+					
+					elseif( get_field('header_social_location', 'options') == 'mainbar' ):
+					
+					echo '<div class="col_8">';
+					
+					echo get_template_part( 'navs/nav', 'main' );
+					
+					echo '</div><div class="col_2">';
+					
+					echo get_template_part( 'navs/nav', 'social' );
+					
+					echo '</div>';
+					
+					elseif( get_field('header_social_location', 'options') == 'none' ):
+					
+					echo '<div class="col_10">';
+					
+					echo get_template_part( 'navs/nav', 'main' );
+					
+					echo '</div>';
+					
+					endif;
+					
+				?>
 				
 			</div>
 			
