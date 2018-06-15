@@ -32,7 +32,6 @@
 	
 	/* Generated ACF Fields */
 	
-	
 	if( function_exists('acf_add_local_field_group') ):
 
 acf_add_local_field_group(array(
@@ -1472,23 +1471,9 @@ acf_add_local_field_group(array(
 	'location' => array(
 		array(
 			array(
-				'param' => 'page_template',
+				'param' => 'post_type',
 				'operator' => '==',
-				'value' => 'default',
-			),
-		),
-		array(
-			array(
-				'param' => 'page_template',
-				'operator' => '==',
-				'value' => 'page-home.php',
-			),
-		),
-		array(
-			array(
-				'param' => 'page_template',
-				'operator' => '==',
-				'value' => 'page-protected.php',
+				'value' => 'page',
 			),
 		),
 	),
@@ -1838,23 +1823,9 @@ acf_add_local_field_group(array(
 	'location' => array(
 		array(
 			array(
-				'param' => 'page_template',
+				'param' => 'post_type',
 				'operator' => '==',
-				'value' => 'default',
-			),
-		),
-		array(
-			array(
-				'param' => 'page_template',
-				'operator' => '==',
-				'value' => 'page-home.php',
-			),
-		),
-		array(
-			array(
-				'param' => 'page_template',
-				'operator' => '==',
-				'value' => 'page-protected.php',
+				'value' => 'page',
 			),
 		),
 	),
@@ -1869,5 +1840,5 @@ acf_add_local_field_group(array(
 ));
 
 endif;
-
+	
 ?>
