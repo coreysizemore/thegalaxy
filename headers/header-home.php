@@ -142,6 +142,16 @@
 	endif;
 
 ?>
+
+<?php 
+	
+	if( get_field('imageslideshow_overlay', 'options') ):
+	
+		echo '<div class="image_overlay"></div>';
+	
+	endif;
+	
+?>
 	
 	<?php get_template_part( 'sidebars/sidebar' , 'contact-information' ); ?>
 	
@@ -296,6 +306,16 @@
 </header>
 
 <header class="header_mobile_home home_default_image">
+	
+	<?php 
+	
+		if( get_field('imageslideshow_overlay', 'options') ):
+		
+			echo '<div class="image_overlay"></div>';
+		
+		endif;
+		
+	?>
 	
 	<?php get_template_part( 'navs/nav', 'mobile' ); ?>
 	

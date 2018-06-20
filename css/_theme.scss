@@ -669,6 +669,13 @@ header {
 			}
 		}
 	}
+	
+	.image_overlay {
+		background: rgba($colorone, .75);
+		height: 100%;
+		position: relative;
+		width: 100%;
+	}
 }
 
 /* mobile nav */
@@ -1094,6 +1101,7 @@ header.slideshow {
 			margin-left: -580px;
 			position: absolute;
 			top: 400px;
+			z-index: 2;
 			
 			h1 {
 				color: #ffffff;

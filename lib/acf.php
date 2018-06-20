@@ -561,6 +561,30 @@ acf_add_local_field_group(array(
 			),
 		),
 		array(
+			'key' => 'field_5b2ae2e77d242',
+			'label' => 'Image/Slideshow Overlay',
+			'name' => 'imageslideshow_overlay',
+			'type' => 'checkbox',
+			'instructions' => 'Would you like to enable an overlay on top of the header image or slideshow?',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'choices' => array(
+				'enable' => 'Enable',
+			),
+			'allow_custom' => 0,
+			'save_custom' => 0,
+			'default_value' => array(
+			),
+			'layout' => 'horizontal',
+			'toggle' => 0,
+			'return_format' => 'value',
+		),
+		array(
 			'key' => 'field_58ec072ce8889',
 			'label' => 'Home Logo',
 			'name' => 'home_logo',
