@@ -673,7 +673,7 @@ header {
 	.image_overlay {
 		background: rgba($colorone, .75);
 		height: 100%;
-		position: relative;
+		position: absolute;
 		width: 100%;
 	}
 }

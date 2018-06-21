@@ -60,6 +60,16 @@
 	
 	<?php get_template_part( 'sidebars/sidebar' , 'contact-information' ); ?>
 	
+	<?php 
+	
+		if( get_field('imageslideshow_overlay', 'options') ):
+		
+			echo '<div class="image_overlay"></div>';
+		
+		endif;
+		
+	?>
+	
 	<?php
 		
 		if( get_field('navigation_location', 'options') == 'top' ):
@@ -164,6 +174,16 @@
 <header class="header_page header_page_mobile page_default_image <?php basename(get_permalink()); ?>">
 	
 	<?php get_template_part( 'navs/nav', 'mobile' ); ?>
+	
+	<?php 
+	
+		if( get_field('imageslideshow_overlay', 'options') ):
+		
+			echo '<div class="image_overlay"></div>';
+		
+		endif;
+		
+	?>
 	
 	<div id="page_title">
 		
