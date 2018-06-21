@@ -307,6 +307,8 @@
 
 <header class="header_mobile_home home_default_image">
 	
+	<?php get_template_part( 'navs/nav', 'mobile' ); ?>
+	
 	<?php 
 	
 		if( get_field('imageslideshow_overlay', 'options') ):
@@ -316,8 +318,6 @@
 		endif;
 		
 	?>
-	
-	<?php get_template_part( 'navs/nav', 'mobile' ); ?>
 	
 	<?php if( get_field('home_logo','options') != 'none'): ?>
 	
