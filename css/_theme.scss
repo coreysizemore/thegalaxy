@@ -250,6 +250,7 @@ header.header_page {
 	background-attachment: fixed;
 	
 	#page_title {
+		position: relative;
 		
 		h1.heading {
 			color: $light_font;
@@ -674,7 +675,9 @@ header {
 		background: rgba($colorone, .75);
 		height: 100%;
 		position: absolute;
+		top: 0px;
 		width: 100%;
+		z-index: 0;
 	}
 }
 
@@ -724,6 +727,7 @@ header.header_page_mobile {
 		background: $colorone;
 		padding: 10px 0px;
 		position:relative;
+		z-index: 4;
 		
 		#logo_mobile {
 			img {
