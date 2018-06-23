@@ -4,67 +4,109 @@
 		@package WordPress
 		@subpackage thegalaxy
 	*/
-	 
-?>
 
-<div id="logo_home">
+	echo '<div id="logo_home">';
 	
-	<?php if( get_field('home_logo', 'options') == 'image'): ?>
+	if( get_field('home_logo', 'options') == 'image'):
 					                
-		<?php if ( get_theme_mod( 'themeslug_logo_3' ) ) : ?>
+		if ( get_theme_mod( 'themeslug_logo_3' ) ) :
 				
-			<a href='<?php echo esc_url( home_url( '/' ) ); ?>' title='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>' rel='home'><img src='<?php echo esc_url( get_theme_mod( 'themeslug_logo_3' ) ); ?>' alt='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>'></a>
+			echo '<a href="';
 			
-			<?php if ( get_bloginfo( 'description' ) ) : ?>
+			echo esc_url( home_url( '/' ) );
 			
-				<h2 class='site-description'><?php bloginfo( 'description' ); ?></h2>
+			echo '" title="';
+			
+			echo esc_attr( get_bloginfo( 'name', 'display' ) );
+			
+			echo '" rel="home"><img src="';
+			
+			echo esc_url( get_theme_mod( 'themeslug_logo_3' ) );
+			
+			echo '" alt="';
+			
+			echo esc_attr( get_bloginfo( 'name', 'display' ) );
+			
+			echo '"></a>';
+			
+			if ( get_bloginfo( 'description' ) ) :
+			
+				echo '<h2 class="site-description">';
 				
-			<?php else : ?>
+				bloginfo( 'description' );
+				
+				echo '</h2>';
 			
-			<?php endif; ?>
+			endif;
 				    
-		<?php else : ?>
+		else :
 				
-			<h1 class='site-title'><a href='<?php echo esc_url( home_url( '/' ) ); ?>' title='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>' rel='home'><?php bloginfo( 'name' ); ?></a></h1>
+			echo '<h1 class="site-title"><a href="';
 			
-			<?php if ( get_bloginfo( 'description' ) ) : ?>
+			echo esc_url( home_url( '/' ) );
+			
+			echo '" title="';
+			
+			echo esc_attr( get_bloginfo( 'name', 'display' ) );
+			
+			echo '" rel="home">';
+			
+			bloginfo( 'name' );
+			
+			echo '</a></h1>';
+			
+			if ( get_bloginfo( 'description' ) ) :
 				        
-				<h2 class='site-description'><?php bloginfo( 'description' ); ?></h2>
-			 	
-			<?php else : ?>
+				echo '<h2 class="site-description">';
+				
+				bloginfo( 'description' );
+				
+				echo '</h2>';
 			 
-			<?php endif; ?>
+			endif;
 				    
-		<?php endif; ?>
+		endif;
 	
-	<?php elseif( get_field('home_logo', 'options') == 'text'): ?>
+	elseif( get_field('home_logo', 'options') == 'text'):
 	
-		<?php if( get_field('home_logo_text', 'options')): ?>
+		if( get_field('home_logo_text', 'options')):
 		
-			<div class="home_logo_text_wrapper">
+			echo '<div class="home_logo_text_wrapper">';
 		
-				<?php echo the_field('home_logo_text', 'options'); ?>
+				echo the_field('home_logo_text', 'options');
 			
-			</div>
+			echo '</div>';
 		
-		<?php else : ?>
+		else :
 		
-			<h1 class='site-title'><a href='<?php echo esc_url( home_url( '/' ) ); ?>' title='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>' rel='home'><?php bloginfo( 'name' ); ?></a></h1>
+			echo '<h1 class="site-title"><a href="';
 			
-			<?php if ( get_bloginfo( 'description' ) ) : ?>
+			echo esc_url( home_url( '/' ) );
+			
+			echo '" title="';
+			
+			echo esc_attr( get_bloginfo( 'name', 'display' ) );
+			
+			echo '" rel="home">';
+			
+			bloginfo( 'name' );
+			
+			echo '</a></h1>';
+			
+			if ( get_bloginfo( 'description' ) ) :
 				        
-				<h2 class='site-description'><?php bloginfo( 'description' ); ?></h2>
-			 	
-			<?php else : ?>
-			 
-			<?php endif; ?>
-		
-		<?php endif; ?>
-		
-	<?php else : ?>
-	
-		<!-- display nothing -->
-	
-	<?php endif; ?>
+				echo '<h2 class="site-description">';
 				
-</div>
+				bloginfo( 'description' );
+				
+				echo '</h2>';
+			 
+			endif;
+		
+		endif;
+	
+	endif;
+				
+	echo '</div>';
+	
+?>

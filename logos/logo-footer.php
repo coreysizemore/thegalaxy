@@ -4,35 +4,67 @@
 		@package WordPress
 		@subpackage thegalaxy
 	*/
-	 
-?>
 
-<div id="logo_footer">
+	echo '<div id="logo_footer">';
 					                
-	<?php if ( get_theme_mod( 'themeslug_logo_4' ) ) : ?>
+	if ( get_theme_mod( 'themeslug_logo_4' ) ) :
 			
-		<a href='<?php echo esc_url( home_url( '/' ) ); ?>' title='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>' rel='home'><img src='<?php echo esc_url( get_theme_mod( 'themeslug_logo_4' ) ); ?>' alt='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>'></a>
+		echo '<a href="';
 		
-		<?php if ( get_bloginfo( 'description' ) ) : ?>
+		echo esc_url( home_url( '/' ) );
 		
-			<h2 class='site-description'><?php bloginfo( 'description' ); ?></h2>
+		echo '" title="';
+		
+		echo esc_attr( get_bloginfo( 'name', 'display' ) );
+		
+		echo '" rel="home"><img src="';
+		
+		echo esc_url( get_theme_mod( 'themeslug_logo_4' ) );
+		
+		echo '" alt="';
+		
+		echo esc_attr( get_bloginfo( 'name', 'display' ) );
+		
+		echo '"></a>';
+		
+		if ( get_bloginfo( 'description' ) ) :
+		
+			echo '<h2 class="site-description">';
 			
-		<?php else : ?>
+			bloginfo( 'description' );
+			
+			echo '</h2>';
 		
-		<?php endif; ?>
+		endif;
 			    
-	<?php else : ?>
+	else :
 			
-		<h1 class='site-title'><a href='<?php echo esc_url( home_url( '/' ) ); ?>' title='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>' rel='home'><?php bloginfo( 'name' ); ?></a></h1>
+		echo '<h1 class="site-title"><a href="';
+		
+		echo esc_url( home_url( '/' ) );
+		
+		echo '" title="';
+		
+		echo esc_attr( get_bloginfo( 'name', 'display' ) );
+		
+		echo '" rel="home">';
+		
+		bloginfo( 'name' );
+		
+		echo '</a></h1>';
 			        
-		 <?php if ( get_bloginfo( 'description' ) ) : ?>
+		if ( get_bloginfo( 'description' ) ) :
 		
-			<h2 class='site-description'><?php bloginfo( 'description' ); ?></h2>
+			echo '<h2 class="site-description">';
 			
-		<?php else : ?>
+			bloginfo( 'description' );
+			
+			echo '</h2>';
 		
-		<?php endif; ?>
+		endif;
 			    
-	<?php endif; ?>
+	endif;
 				
-</div>
+	echo '</div>';
+	
+?>

@@ -4,38 +4,26 @@
 		@package WordPress
 		@subpackage thegalaxy
 	*/
-	 
-?>
 
-<div class="main">
+	echo '<div class="main blog_single">';
 	
-	<?php if ( function_exists('yoast_breadcrumb') ) {yoast_breadcrumb('<div class="container"><div class="row gutters"><div class="col_12"><div class="breadcrumb_wrapper"><span class="breadcrumbs">','</span></div></div></div></div>');} ?>
-	
-	<div class="container">
+	if ( function_exists('yoast_breadcrumb') ):
 		
-		<div class="row gutters">
+		yoast_breadcrumb('<div class="container"><div class="row gutters"><div class="col_12"><div class="breadcrumb_wrapper"><span class="breadcrumbs">','</span></div></div></div></div>');
 			
-			<div class="col_12">
-				
-				<div class="content">
+	endif;
 	
-					<?php get_template_part( 'loops/loop', 'single' ); ?>
+	echo '<div class="container"><div class="row gutters"><div class="col_12"><div class="content">';
+	
+	get_template_part( 'loops/loop', 'single' );
 					
-				</div>
-				
-			</div>
-			
-		</div>
+	echo '</div></div></div></div><div class="edit_button"><span class="edit">';
 	
-	</div>
+	edit_post_link();
 	
-	<div class="edit_button">
-
-		<span class="edit"><?php edit_post_link(); ?></span>
+	echo '</span></div></div>';
 	
-	</div>
-	
-</div>
+?>
 
 	
 	

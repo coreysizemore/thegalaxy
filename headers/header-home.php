@@ -4,16 +4,12 @@
 		@package WordPress
 		@subpackage thegalaxy
 	*/
-	 
-?>
+	
+	if( get_field('display_search', 'options')):
 
-<?php if( get_field('display_search', 'options')): ?>
+		get_search_form();
 
-	<?php get_search_form(); ?>
-
-<?php endif; ?>
-
-<?php
+	endif;
 	
 	if( get_field('member_login_bar', 'options') ):
 	
@@ -58,10 +54,6 @@
 		endif;
 	
 	endif;
-		 
-?>
-
-<?php
 
 	if( get_field('home_selection', 'options') == 'full' ):
 	
@@ -140,10 +132,6 @@
 		echo '</div>';
 			
 	endif;
-
-?>
-
-<?php 
 	
 	if( get_field('imageslideshow_overlay', 'options') ):
 	
@@ -151,204 +139,172 @@
 	
 	endif;
 	
-?>
-	
-	<?php get_template_part( 'sidebars/sidebar' , 'contact-information' ); ?>
-	
-	<?php
+	get_template_part( 'sidebars/sidebar' , 'contact-information' );
 		
-		if( get_field('navigation_location', 'options') == 'top' ):
-		
+	if( get_field('navigation_location', 'options') == 'top' ):
+	
 		echo '<div id="nav_bar" class="top_navigation">';
-		
-		elseif( get_field('navigation_location', 'options') == 'bottom' ):
-		
+	
+	elseif( get_field('navigation_location', 'options') == 'bottom' ):
+	
 		echo '<div id="nav_bar" class="bottom_navigation">';
-		
-		elseif( get_field('navigation_location', 'options') == 'left' ):
-		
+	
+	elseif( get_field('navigation_location', 'options') == 'left' ):
+	
 		echo '<div id="nav_bar" class="left_navigation">';
-		
-		elseif( get_field('navigation_location', 'options') == 'right' ):
-		
+	
+	elseif( get_field('navigation_location', 'options') == 'right' ):
+	
 		echo '<div id="nav_bar" class="right_navigation">';
+	
+	endif;
+
+	echo '<div class="container"><div class="row gutters"><div class="col_2">';
 		
+	get_template_part( 'logos/logo', 'main' );
+	
+	echo '</div>';
+
+	if( get_field('header_social_location', 'options') == 'both' ):
+	
+		echo '<div class="col_8">';
+		
+		echo get_template_part( 'navs/nav', 'main' );
+		
+		echo '</div><div class="col_2">';
+		
+		echo get_template_part( 'navs/nav', 'social' );
+		
+		echo '</div>';
+	
+	elseif( get_field('header_social_location', 'options') == 'topbar' ):
+	
+		echo '<div class="col_10">';
+		
+		echo get_template_part( 'navs/nav', 'main' );
+		
+		echo '</div>';
+	
+	elseif( get_field('header_social_location', 'options') == 'mainbar' ):
+	
+		echo '<div class="col_8">';
+		
+		echo get_template_part( 'navs/nav', 'main' );
+		
+		echo '</div><div class="col_2">';
+		
+		echo get_template_part( 'navs/nav', 'social' );
+		
+		echo '</div>';
+	
+	elseif( get_field('header_social_location', 'options') == 'none' ):
+	
+		echo '<div class="col_10">';
+		
+		echo get_template_part( 'navs/nav', 'main' );
+		
+		echo '</div>';
+	
+	endif;
+				
+	echo '</div></div></div>';
+	
+	if( get_field('home_logo','options') != 'none'):
+	
+		if( get_field('home_logo_location', 'options') == 'left' ):
+		
+			echo '<div id="home_logo" class="home_logo_left" data-stellar-ratio="0.75">';
+			
 		endif;
 		
-	?>
+		if( get_field('home_logo_location', 'options') == 'center' ):
 		
-		<div class="container">
+			echo '<div id="home_logo" class="home_logo_center" data-stellar-ratio="0.75">';
 			
-			<div class="row gutters">
+		endif;
 		
-				<div class="col_2">
+		if( get_field('home_logo_location', 'options') == 'right' ):
+		
+			echo '<div id="home_logo" class="home_logo_right" data-stellar-ratio="0.75">';
+			
+		endif;
+			
+		get_template_part( 'logos/logo', 'home' );
+			
+		echo '<div id="home_page_nav">';
 				
-					<?php get_template_part( 'logos/logo', 'main' ); ?>
+		wp_nav_menu( array( 'theme_location' => 'home_page_nav' ) );
 				
-				</div>
+		echo '</div></div>';
+		
+	else :
+			
+		if ( has_nav_menu( 'home_page_nav' ) ):
+		
+			if( get_field('home_logo_location', 'options') == 'left' ):
+		
+				echo '<div id="home_logo" class="home_logo_left" data-stellar-ratio="0.75">';
 				
-				<?php
-		
-					if( get_field('header_social_location', 'options') == 'both' ):
-					
-					echo '<div class="col_8">';
-					
-					echo get_template_part( 'navs/nav', 'main' );
-					
-					echo '</div><div class="col_2">';
-					
-					echo get_template_part( 'navs/nav', 'social' );
-					
-					echo '</div>';
-					
-					elseif( get_field('header_social_location', 'options') == 'topbar' ):
-					
-					echo '<div class="col_10">';
-					
-					echo get_template_part( 'navs/nav', 'main' );
-					
-					echo '</div>';
-					
-					elseif( get_field('header_social_location', 'options') == 'mainbar' ):
-					
-					echo '<div class="col_8">';
-					
-					echo get_template_part( 'navs/nav', 'main' );
-					
-					echo '</div><div class="col_2">';
-					
-					echo get_template_part( 'navs/nav', 'social' );
-					
-					echo '</div>';
-					
-					elseif( get_field('header_social_location', 'options') == 'none' ):
-					
-					echo '<div class="col_10">';
-					
-					echo get_template_part( 'navs/nav', 'main' );
-					
-					echo '</div>';
-					
-					endif;
-					
-				?>
+			endif;
+			
+			if( get_field('home_logo_location', 'options') == 'center' ):
+			
+				echo '<div id="home_logo" class="home_logo_center" data-stellar-ratio="0.75">';
 				
-			</div>
+			endif;
 			
-		</div>
-		
-	</div>
-	
-	<?php if( get_field('home_logo','options') != 'none'): ?>
-	
-		<?php if( get_field('home_logo_location', 'options') == 'left' ): ?>
-		
-			<div id="home_logo" class="home_logo_left" data-stellar-ratio="0.75">
+			if( get_field('home_logo_location', 'options') == 'right' ):
 			
-		<?php endif; ?>
-		
-		<?php if( get_field('home_logo_location', 'options') == 'center' ): ?>
-		
-			<div id="home_logo" class="home_logo_center" data-stellar-ratio="0.75">
-			
-		<?php endif; ?>
-		
-		<?php if( get_field('home_logo_location', 'options') == 'right' ): ?>
-		
-			<div id="home_logo" class="home_logo_right" data-stellar-ratio="0.75">
-			
-		<?php endif; ?>
-			
-			<?php get_template_part( 'logos/logo', 'home' ); ?>
-			
-			<div id="home_page_nav">
+				echo '<div id="home_logo" class="home_logo_right" data-stellar-ratio="0.75">';
 				
-				<?php wp_nav_menu( array( 'theme_location' => 'home_page_nav' ) ); ?>	
-				
-			</div>
-		
-		</div>
-		
-	<?php else : ?>
+			endif;
 			
-		<?php if ( has_nav_menu( 'home_page_nav' ) ): ?>
-		
-			<?php if( get_field('home_logo_location', 'options') == 'left' ): ?>
-		
-				<div id="home_logo" class="home_logo_left" data-stellar-ratio="0.75">
-				
-			<?php endif; ?>
-			
-			<?php if( get_field('home_logo_location', 'options') == 'center' ): ?>
-			
-				<div id="home_logo" class="home_logo_center" data-stellar-ratio="0.75">
-				
-			<?php endif; ?>
-			
-			<?php if( get_field('home_logo_location', 'options') == 'right' ): ?>
-			
-				<div id="home_logo" class="home_logo_right" data-stellar-ratio="0.75">
-				
-			<?php endif; ?>
-			
-				<div id="home_page_nav">
+			echo '<div id="home_page_nav">';
 					
-					<?php wp_nav_menu( array( 'theme_location' => 'home_page_nav' ) ); ?>
+				wp_nav_menu( array( 'theme_location' => 'home_page_nav' ) );
 					
-				</div>
-			
-			</div>
+			echo '</div></div>';
 			     
-		<?php endif; ?>
+		endif;
 
-	<?php endif; ?>
-	
-</header>
+	endif;
 
-<header class="header_mobile_home home_default_image">
+	echo '</header><header class="header_mobile_home home_default_image">';
 	
-	<?php get_template_part( 'navs/nav', 'mobile' ); ?>
+	get_template_part( 'navs/nav', 'mobile' );
 	
-	<?php 
-	
-		if( get_field('imageslideshow_overlay', 'options') ):
+	if( get_field('imageslideshow_overlay', 'options') ):
 		
-			echo '<div class="image_overlay"></div>';
+		echo '<div class="image_overlay"></div>';
+		
+	endif;
+	
+	if( get_field('home_logo','options') != 'none'):
+	
+		echo '<div id="home_logo">';
+			
+		get_template_part( 'logos/logo', 'home' );
+			
+		echo '<div id="home_page_nav">';
+				
+			wp_nav_menu( array( 'theme_location' => 'home_page_nav' ) );
+				
+		echo '</div></div>';
+	
+	else :
+	
+		if ( has_nav_menu( 'home_page_nav' ) ):
+		
+			echo '<div id="home_logo"><div id="home_page_nav">';
+			
+				wp_nav_menu( array( 'theme_location' => 'home_page_nav' ) );
+				
+			echo '</div></div>';
 		
 		endif;
-		
-	?>
 	
-	<?php if( get_field('home_logo','options') != 'none'): ?>
+	endif;
 	
-	<div id="home_logo">
-		
-		<?php get_template_part( 'logos/logo', 'home' ); ?>
-		
-		<div id="home_page_nav">
-			
-			<?php wp_nav_menu( array( 'theme_location' => 'home_page_nav' ) ); ?>
-			
-		</div>
+	echo '</header>';
 	
-	</div>
-	
-	<?php else : ?>
-	
-	<?php if ( has_nav_menu( 'home_page_nav' ) ): ?>
-		
-		<div id="home_logo">
-		
-			<div id="home_page_nav">
-			
-				<?php wp_nav_menu( array( 'theme_location' => 'home_page_nav' ) ); ?>
-				
-			</div>
-			
-		</div>
-		
-		<?php endif; ?>
-	
-	<?php endif; ?>
-	
-</header>
+?>

@@ -5,9 +5,6 @@
 		@subpackage thegalaxy
 	*/
 	 
-?>
-
-<?php
 	
 	if( get_field('member_login_bar', 'options') ):
 	
@@ -52,117 +49,97 @@
 		endif;
 	
 	endif;
-		 
-?>
-	
-<header class="header_page header_page_home page_default_image blog <?php basename(get_permalink()); ?>" data-stellar-background-ratio="0.9">
-	
-	<?php get_template_part( 'sidebars/sidebar' , 'contact-information' ); ?>
-	
-	<?php
-		
-		if( get_field('navigation_location', 'options') == 'top' ):
-		
-		echo '<div id="nav_bar" class="top_navigation">';
-		
-		elseif( get_field('navigation_location', 'options') == 'bottom' ):
-		
-		echo '<div id="nav_bar" class="bottom_navigation">';
-		
-		elseif( get_field('navigation_location', 'options') == 'left' ):
-		
-		echo '<div id="nav_bar" class="left_navigation">';
-		
-		elseif( get_field('navigation_location', 'options') == 'right' ):
-		
-		echo '<div id="nav_bar" class="right_navigation">';
-		
-		endif;
-		
-	?>
-		
-		<div class="container">
-			
-			<div class="row gutters">
-		
-				<div class="col_2">
-				
-					<?php get_template_part( 'logos/logo', 'main' ); ?>
-				
-				</div>
-				
-				<?php
-		
-					if( get_field('header_social_location', 'options') == 'both' ):
-					
-					echo '<div class="col_8">';
-					
-					echo get_template_part( 'navs/nav', 'main' );
-					
-					echo '</div><div class="col_2">';
-					
-					echo get_template_part( 'navs/nav', 'social' );
-					
-					echo '</div>';
-					
-					elseif( get_field('header_social_location', 'options') == 'topbar' ):
-					
-					echo '<div class="col_10">';
-					
-					echo get_template_part( 'navs/nav', 'main' );
-					
-					echo '</div>';
-					
-					elseif( get_field('header_social_location', 'options') == 'mainbar' ):
-					
-					echo '<div class="col_8">';
-					
-					echo get_template_part( 'navs/nav', 'main' );
-					
-					echo '</div><div class="col_2">';
-					
-					echo get_template_part( 'navs/nav', 'social' );
-					
-					echo '</div>';
-					
-					elseif( get_field('header_social_location', 'options') == 'none' ):
-					
-					echo '<div class="col_10">';
-					
-					echo get_template_part( 'navs/nav', 'main' );
-					
-					echo '</div>';
-					
-					endif;
-					
-				?>
-				
-			</div>
-			
-		</div>
-		
-	</div>
-	
-	<div id="page_title" data-stellar-ratio="0.75">
-		
-		<h1 class="heading">Latest News</h1>
-		
-		<h2 class="subheading">Below is our latest news entries.</h2>
-		
-	</div>
-	
-</header>
 
-<header class="header_page header_page_mobile page_default_image blog <?php basename(get_permalink()); ?>">
+	echo '<header class="header_page header_page_home page_default_image ';
 	
-	<?php get_template_part( 'navs/nav', 'mobile' ); ?>
+	basename(get_permalink());
 	
-	<div id="page_title">
-		
-		<h1 class="heading">Latest News</h1>
-		
-		<h2 class="subheading">Below is our latest news entries.</h2>
-		
-	</div>
+	echo '" data-stellar-background-ratio="0.9">';
 	
-</header>
+	get_template_part( 'sidebars/sidebar' , 'contact-information' );
+
+	if( get_field('navigation_location', 'options') == 'top' ):
+	
+		echo '<div id="nav_bar" class="top_navigation">';
+	
+	elseif( get_field('navigation_location', 'options') == 'bottom' ):
+	
+		echo '<div id="nav_bar" class="bottom_navigation">';
+	
+	elseif( get_field('navigation_location', 'options') == 'left' ):
+	
+		echo '<div id="nav_bar" class="left_navigation">';
+	
+	elseif( get_field('navigation_location', 'options') == 'right' ):
+	
+		echo '<div id="nav_bar" class="right_navigation">';
+	
+	endif;
+	
+	echo '<div class="container"><div class="row gutters"><div class="col_2">';
+		
+	get_template_part( 'logos/logo', 'main' );
+			
+	echo '</div>';
+		
+	if( get_field('header_social_location', 'options') == 'both' ):
+	
+		echo '<div class="col_8">';
+		
+		echo get_template_part( 'navs/nav', 'main' );
+		
+		echo '</div><div class="col_2">';
+		
+		echo get_template_part( 'navs/nav', 'social' );
+		
+		echo '</div>';
+	
+	elseif( get_field('header_social_location', 'options') == 'topbar' ):
+	
+		echo '<div class="col_10">';
+		
+		echo get_template_part( 'navs/nav', 'main' );
+		
+		echo '</div>';
+	
+	elseif( get_field('header_social_location', 'options') == 'mainbar' ):
+	
+		echo '<div class="col_8">';
+		
+		echo get_template_part( 'navs/nav', 'main' );
+		
+		echo '</div><div class="col_2">';
+		
+		echo get_template_part( 'navs/nav', 'social' );
+		
+		echo '</div>';
+	
+	elseif( get_field('header_social_location', 'options') == 'none' ):
+	
+		echo '<div class="col_10">';
+		
+		echo get_template_part( 'navs/nav', 'main' );
+		
+		echo '</div>';
+	
+	endif;
+	
+	echo '</div></div></div>';
+				
+	echo '<div id="page_title" data-stellar-ratio="0.75"><h1 class="heading">Latest News</h1><h2 class="subheading">Below is our latest news entries.</h2></div>';	
+	
+	echo '</header>';
+
+	echo '<header class="header_page header_page_mobile page_default_image blog ';
+	
+	basename(get_permalink());
+	
+	echo '">';
+	
+	get_template_part( 'navs/nav', 'mobile' );
+	
+	echo '<div id="page_title"><h1 class="heading">Latest News</h1><h2 class="subheading">Below is our latest news entries.</h2></div>';
+	
+	echo '</header>';
+	
+?>

@@ -4,31 +4,21 @@
 		@package WordPress
 		@subpackage thegalaxy
 	*/
-	 
-?>
 
-<div class="main coloredbg">
+	echo '<div class="main search_results">';
 	
-	<?php if ( function_exists('yoast_breadcrumb') ) {yoast_breadcrumb('<div class="container"><div class="row gutters"><div class="col_12"><div class="breadcrumb_wrapper"><span class="breadcrumbs">','</span></div></div></div></div>');} ?>
-	
-	<div class="container">
+	if ( function_exists('yoast_breadcrumb') ):
 		
-		<div class="row gutters">
+		yoast_breadcrumb('<div class="container"><div class="row gutters"><div class="col_12"><div class="breadcrumb_wrapper"><span class="breadcrumbs">','</span></div></div></div></div>');
 			
-			<div class="col_12">
-				
-				<div class="content">
+	endif;
 	
-					<?php get_template_part( 'loops/loop', 'search' ); ?>
+	echo '<div class="container"><div class="row gutters"><div class="col_12"><div class="content">';
+	
+	get_template_part( 'loops/loop', 'search' );
 					
-				</div>
+	echo '</div></div></div></div></div>';
 				
-			</div>
-			
-		</div>
-	
-	</div>
-	
-</div>
+?>
 	
 	
