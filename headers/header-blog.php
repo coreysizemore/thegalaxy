@@ -57,6 +57,12 @@
 	echo '" data-stellar-background-ratio="0.9">';
 	
 	get_template_part( 'sidebars/sidebar' , 'contact-information' );
+	
+	if( get_field('imageslideshow_overlay', 'options') ):
+		
+		echo '<div class="image_overlay"></div>';
+		
+	endif;
 
 	if( get_field('navigation_location', 'options') == 'top' ):
 	
@@ -137,6 +143,12 @@
 	echo '">';
 	
 	get_template_part( 'navs/nav', 'mobile' );
+	
+	if( get_field('imageslideshow_overlay', 'options') ):
+		
+		echo '<div class="image_overlay"></div>';
+		
+	endif;
 	
 	echo '<div id="page_title"><h1 class="heading">Latest News</h1><h2 class="subheading">Below is our latest news entries.</h2></div>';
 	
