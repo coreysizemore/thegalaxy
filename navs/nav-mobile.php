@@ -4,10 +4,6 @@
 		@package WordPress
 		@subpackage thegalaxy
 	*/
-	 
-?>
-
-<?php
 	
 	if( get_field('mobile_header_bar', 'options') == 'advanced' ):
 	

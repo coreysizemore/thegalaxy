@@ -5,22 +5,14 @@
 		@subpackage thegalaxy
 	*/
 	 
+	if ( is_active_sidebar( 'appointment-sidebar' ) ) :
+	
+		echo '<div class="appointment"><div id="appointment_sidebar">';
+				
+			dynamic_sidebar( 'appointment-sidebar' );
+				        
+		echo '</div></div>';
+	
+	endif; 
+
 ?>
-
-<?php if ( is_active_sidebar( 'appointment-sidebar' ) ) : ?>
-
-	<div class="appointment">
-	
-		<div id="appointment_sidebar">
-			
-			<?php dynamic_sidebar( 'appointment-sidebar' ); ?>
-			        
-		</div>
-	
-	</div>
-
-<?php else : ?>
-
-	<!-- You need to drag a widget into your sidebar in the WordPress Admin -->
-	
-<?php endif; ?>

@@ -291,7 +291,8 @@ header {
 	
 	/* contact_information_bar */
 	
-	#contact_information.top_navigation {
+	#contact_information.top_navigation,
+	#contact_information.full_navigation {
 		background: rgba(#000000,.5);
 	}
 	
@@ -345,14 +346,16 @@ header {
 		}
 	}
 	
-	#contact_information + #nav_bar.top_navigation {
+	#contact_information + #nav_bar.top_navigation,
+	#contact_information + #nav_bar.full_navigation {
 		top: 30px;
 	}
 	
 	
 	/* desktop navigation */
 	
-	#nav_bar.top_navigation {
+	#nav_bar.top_navigation,
+	#nav_bar.full_navigation {
 		background-image: linear-gradient(rgba(#000000,.5), $transparent);
 		border-bottom: .25px solid;
 		border-color: rgba(#ffffff,0.25);
@@ -393,6 +396,39 @@ header {
 		z-index: 3;
 		@include background_clip(padding-box);
 		@include transition(.25s);
+		
+		&.full_navigation {
+			height: 160px;
+			
+			.container {
+				
+				.nav_logo_location_left {
+					text-align: left;
+				}
+				
+				.nav_logo_location_center {
+					text-align: center;
+				}
+				
+				.nav_logo_location_right {
+					text-align: right;
+				}
+				
+				nav {
+					float: none;
+					margin: 0 auto;
+					
+					ul {
+						li {
+							a:link,
+							a:visited {
+								padding: 23px 10px;
+							}
+						}
+					}
+				}
+			}
+		}
 		
 		#logo_main {
 		
@@ -439,6 +475,13 @@ header {
 				nav#main_nav {
 					float: none;
 					margin: 0 auto;
+				}
+			}
+			
+			.col_10 {
+				nav#main_nav {
+					float: none;
+					margin: 0;
 				}
 			}
 			
@@ -583,6 +626,23 @@ header {
 	#nav_bar.scroll-fix {
 		background: #ffffff;
 		height: 70px;
+		
+		&.full_navigation {
+			height: 123px;
+			
+			.container {
+				nav {
+					ul {
+						li {
+							a:link,
+							a:visited {
+								padding: 18px 10px;
+							}
+						}
+					}
+				}
+			}
+		}
 		
 		#logo_main {
 		

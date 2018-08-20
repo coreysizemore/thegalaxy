@@ -4,12 +4,8 @@
 		@package WordPress
 		@subpackage thegalaxy
 	*/
-	 
-?>
 
-<nav id="social_nav">
-	
-	<?php
+	echo '<nav id="social_nav">';
 						
 		if( have_rows('business_information', 'options') ):
 							
@@ -42,7 +38,7 @@
 		else :
 									
 		endif;
-				
-	?>
 	
-</nav>
+	echo '</nav>';
+	
+?>

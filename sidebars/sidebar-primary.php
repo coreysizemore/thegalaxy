@@ -5,22 +5,18 @@
 		@subpackage thegalaxy
 	*/
 	 
-?>
-
-<?php if ( is_active_sidebar( 'primary-sidebar' ) ) : ?>
-
-	<div class="sidebar">
-			
-		<?php dynamic_sidebar( 'primary-sidebar' ); ?>
+	if ( is_active_sidebar( 'primary-sidebar' ) ) :
 	
-	</div>
-
-<?php elseif ( get_field('business_information', 'options') ): ?>
-
-	<div class="sidebar">
-		
-		<?php 
+		echo '<div class="sidebar">';
 				
+			dynamic_sidebar( 'primary-sidebar' );
+		
+		echo '</div>';
+	
+	elseif ( get_field('business_information', 'options') ):
+	
+		echo '<div class="sidebar">';
+					
 			if( get_field('business_information', 'options')):
 						
 				if( have_rows('business_information', 'options') ):
@@ -210,13 +206,13 @@
 				endif;
 					
 			endif; 
-				
-		?>
+		
+		echo '</div>';
 	
-	</div>
-
-<?php else : ?>
-
-	<p>You need to drag a widget into your sidebar in the WordPress Admin.</p>
+	else :
 	
-<?php endif; ?>
+		echo '<p>You need to drag a widget into your sidebar in the WordPress Admin.</p>';
+		
+	endif; 
+
+?>
