@@ -86,12 +86,33 @@
 		display: none;
 	}
 	
-	/* appointment */
+	/* attention */
 	
-	.appointment {
+	#attention_bar {
+
+		.attention_bar_top,
+		.attention_bar_bottom {
+			width: calc(100% - 40px);
+		}
 		
-		p {
-			width: 500px;
+		&.horizontal_bar {
+			
+			.attention_bar_top,
+			.attention_bar_bottom {
+				
+				h3 {
+					display: block;
+					margin: 0px 0px 20px 0px;
+					text-align: center;
+					width: 100%;
+				}
+				
+				div.menu-appointment-container {
+					display: block;
+					text-align: center;
+					width: 100%;
+				}
+			}
 		}
 	}
 	
@@ -104,5 +125,4 @@
 	#footer_sidebar_4.footer_sidebar {
 		margin-bottom: 0px;
 	}
-	
 }

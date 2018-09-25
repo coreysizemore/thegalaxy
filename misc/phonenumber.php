@@ -21,11 +21,11 @@
 			
 			if ($ph['display_icon']) :
 			
-				echo '<span class="icon icon-';
+				echo '<i class="fas fa-';
 				
 				echo $ph['display_icon'];
 				
-				echo '"></span>';
+				echo '"></i>';
 			
 			endif;
 								

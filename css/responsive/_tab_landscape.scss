@@ -71,12 +71,13 @@
 		display: none;
 	}
 	
-	/* appointment */
+	/* attention */
 	
-	.appointment {
-		
-		p {
-			width: 800px;
+	#attention_bar {
+
+		.attention_bar_top,
+		.attention_bar_bottom {
+			width: 940px;
 		}
 	}
 	

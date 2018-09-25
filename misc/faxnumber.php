@@ -21,11 +21,11 @@
 			
 			if ($fx['display_icon']) :
 			
-				echo '<span class="icon icon-';
+				echo '<i class="fas fa-';
 				
 				echo $fx['display_icon'];
 				
-				echo '"></span>';
+				echo '"></i>';
 			
 			endif;
 								

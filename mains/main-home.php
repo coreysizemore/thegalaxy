@@ -15,7 +15,7 @@
     
     endif;
 	 
-	get_template_part( 'sidebars/sidebar' , 'announcement' );
+	get_template_part( 'sidebars/sidebar' , 'attentiontop' );
 
 	if( get_field('display_call_out_boxes') ):
 	
@@ -143,9 +143,9 @@
 	
 	get_template_part( 'misc/parallax' );
 
-	if(get_field('appointment_feature')):
+	if(get_field('attention_bottom')):
 
-		get_template_part( 'sidebars/sidebar' , 'appointment' );
+		get_template_part( 'sidebars/sidebar' , 'attentionbottom' );
 		
 	endif;
 					

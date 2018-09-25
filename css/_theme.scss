@@ -159,7 +159,7 @@ a#searchclose:visited {
 		position: relative;
 		width: 700px;
 		
-		.icon {
+		.fas {
 			color: $light_font;
 			display: inline-block;
 			font-size: 52px;
@@ -283,7 +283,7 @@ a#searchclose:visited {
 				li {
 					a:link,
 					a:visited {
-						span.icon {
+						.fas {
 							font-size: 14px;
 							margin-right: 6px;
 							vertical-align: middle;
@@ -1436,7 +1436,7 @@ header#header_page_mobile {
 			padding-right: 20px;
 			
 			.circle {
-				&.icon {
+				&.fas {
 					background: $colorone;
 					color: #ffffff;
 					display: block;
@@ -1468,7 +1468,7 @@ header#header_page_mobile {
 			}
 			
 			.square {
-				&.icon {
+				&.fas {
 					background: $colorone;
 					color: #ffffff;
 					display: block;
@@ -1502,7 +1502,7 @@ header#header_page_mobile {
 			h1,h2,h3 {
 				color: $colorone;
 				font-size: 20px;
-				font-weight: 500;
+				font-weight: 600;
 				margin-bottom: 10px;
 			}
 			
@@ -1513,12 +1513,14 @@ header#header_page_mobile {
 			
 			a:link,
 			a:visited {
-				border: 2px solid $colorone;
-			    color: $colorone;
+				background: $colorone;
+			    color: #ffffff;
 			    display: inline-block;
-			    font-weight: 500;
-			    font-size: 16px;
-			    padding: 5px 15px;
+			    font-weight: 600;
+			    font-size: 14px;
+			    letter-spacing: 2px;
+			    padding: 6px 20px;
+			    text-transform: uppercase;
 			    text-decoration: none;
 			    @include border-radius(5px);
 			    @include transitions(opacity, .15s, linear);
@@ -1657,38 +1659,6 @@ header#header_page_mobile {
 	}
 }
 
-.content.patient_forms,
-.content.experience {
-		
-	a:link,
-	a:visited {
-		background: $colorone;
-		color: $light_font;
-		display: inline-block;
-		margin: 0px 20px 20px 0px;
-		padding: 10px 20px;
-		@include transition(.1s);
-		@include border-radius(5px);
-		
-		.icon {
-			margin-right: 10px;
-		}
-	}
-}
-
-.content.experience {
-	
-	a:first-child:link,
-	a:first-child:visited {
-		background: #7FB59F;
-	}
-	
-	a:last-child:link,
-	a:last-child:visited {
-		background: #EF8E87;
-	}
-}
-
 .sidebar {
 	margin-bottom: 30px;
 	
@@ -1754,7 +1724,7 @@ header#header_page_mobile {
 		text-decoration: none;
 		@include transition(.1s);
 		
-		.icon {
+		.fas {
 			margin-right: 10px;
 		}
 	}
@@ -2008,16 +1978,16 @@ article.blog_entry {
 	.tagcloud {
 		
 		a:link,a:visited {
-			border: .5px solid $colorone;
+			border: 1px solid $colorone;
 			color: $colorone;
 			display: inline-block;
 			font-family: $secondary_font;
-			font-size: 13px !important;
+			font-size: 12px !important;
 			line-height: 20px;
-			font-weight: 500;
+			font-weight: 600;
 			letter-spacing: 2px;
 			margin: 0 7px 7px 0;
-			padding: 2px 5px;
+			padding: 4px 10px;
 			text-decoration: none;
 			text-transform: uppercase;
 			@include border-radius(5px);
@@ -2036,6 +2006,7 @@ article.blog_entry {
 	
 	#blog_sidebar_1,#blog_sidebar_2 {
 		background: $background;
+		@include border-radius(5px);
 		
 		h3 {
 			color: $dark_font;
@@ -2137,51 +2108,90 @@ article.blog_entry {
 	}
 }
 
-/* appointment sidebar */
+/* attention sidebar */
 
-.appointment {
+#attention_bar {
 	background: $colorone;
 	padding: 60px 0;
 	text-align: center;
 	position: relative;
 	
-	h3 {
-		color: $light_font;
-		font-size: 24px;
-		font-weight: 500;
-		margin: 0px 10px 10px 10px;
-	}
+	.attention_bar_top,
+	.attention_bar_bottom {
+		margin: 0 auto;
+		padding: 0px 20px;
+		width: 1180px;
 	
-	p {
-		color: $light_font;
-		font-size: 18px;
-		line-height: 32px;
-		margin: 0 auto 10px auto;
-		width: 1000px;
-	}
-	
-	ul {
+		h3 {
+			color: $light_font;
+			font-size: 24px;
+			font-weight: 500;
+			line-height: 28px;
+			margin: 0px 10px 10px 10px;
+		}
 		
-		li {
-			display: inline-block;
+		p {
+			color: $light_font;
+			font-size: 18px;
+			line-height: 32px;
+			margin: 0 auto 10px auto;
+			width: 1000px;
+		}
+		
+		ul {
 			
-			a:link,a:visited {
-				color: $colorone;
-				background: #ffffff;
+			li {
 				display: inline-block;
-				font-weight: 600;
-				font-size: 14px;
-				letter-spacing: 2px;
-				margin: 10px 10px 0px 10px;
-				padding: 15px 25px;
-				text-decoration: none;
-				text-transform: uppercase;
-				@include border-radius(5px);
-				@include transition(.1s);
+				
+				a:link,a:visited {
+					color: $colorone;
+					background: #ffffff;
+					display: inline-block;
+					font-weight: 600;
+					font-size: 14px;
+					letter-spacing: 2px;
+					margin: 10px 10px 0px 10px;
+					padding: 15px 25px;
+					text-decoration: none;
+					text-transform: uppercase;
+					@include border-radius(5px);
+					@include transition(.1s);
+				}
+				
+				a:hover,a:active {
+					opacity: .5;
+				}
+			}
+		}
+	}
+	
+	&.horizontal_bar {
+		
+		.attention_bar_top,
+		.attention_bar_bottom {
+			
+			h3 {
+				display: inline-block;
+				margin: 0px;
+				text-align: left;
+				vertical-align: middle;
+				width: 75%;
 			}
 			
-			a:hover,a:active {
-				opacity: .5;
+			div.menu-appointment-container {
+				display: inline-block;
+				text-align: right;
+				vertical-align: middle;
+				width: 25%;
+				
+				ul {
+					li {
+						a:link,
+						a:visited {
+							margin: 0px;
+						}
+					}
+				}
 			}
 		}
 	}
@@ -2197,8 +2207,8 @@ footer {
 	h3 {
 		color: $light_font;
 		font-family: $secondary_font;
-		font-size: 14px;
-		font-weight: 300;
+		font-size: 16px;
+		font-weight: 600;
 		letter-spacing: 2px;
 		margin-bottom: 40px;
 		text-transform: uppercase;
@@ -2206,7 +2216,7 @@ footer {
 	
 	p {
 		color: $light_font;
-		font-size: 13px;
+		font-size: 14px;
 		font-weight: 300;
 		line-height: 26px;
 	}
@@ -2247,16 +2257,16 @@ footer {
 	.tagcloud {
 		
 		a:link,a:visited {
-			border: .5px solid rgba(#ffffff,.25);
+			border: 1px solid rgba(#ffffff,.25);
 			color: $light_font;
 			display: inline-block;
 			font-family: $secondary_font;
-			font-size: 11px !important;
+			font-size: 12px !important;
 			line-height: 16px;
 			font-weight: 300;
 			letter-spacing: 2px;
 			margin: 0 2px 7px 0;
-			padding: 2px 5px;
+			padding: 4px 10px;
 			text-decoration: none;
 			text-transform: uppercase;
 			@include border-radius(5px);

@@ -35,7 +35,7 @@
 		
 		<hr />
 		
-		<span class="author"><?php echo get_avatar( get_the_author_meta('ID'), 15); ?> by <?php the_author_posts_link(); ?></span>
+		<span class="author"><?php echo get_avatar( get_the_author_meta('ID'), 25); ?> by <?php the_author_posts_link(); ?></span>
 		 
 	</article>
                         

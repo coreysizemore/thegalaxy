@@ -48,11 +48,11 @@
 				
 					if($cob['shape'] == 'circle'):
 					
-						echo '<span class="circle icon icon-' . $cob['icon'] . '"></span>';
+						echo '<span class="circle fas fa-' . $cob['icon'] . '"></span>';
 					
 					elseif($cob['shape'] == 'square'):
 					
-						echo '<span class="square icon icon-' . $cob['icon'] . '"></span>';
+						echo '<span class="square fas fa-' . $cob['icon'] . '"></span>';
 					
 					else :
 					

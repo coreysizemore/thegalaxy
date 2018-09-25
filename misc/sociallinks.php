@@ -17,11 +17,11 @@
 										
 			echo $s['social_media_link'];
 								
-			echo '" target="_blank"><span class="icon icon-';
+			echo '" target="_blank"><i class="fab fa-';
 								
 			echo $s['social_media_icon'];
 								
-			echo '"></span></a></li>';
+			echo '"></i></a></li>';
 		
 		endforeach;
 		

@@ -11,7 +11,7 @@
 		
 		wp_enqueue_style( 'google-font-two', 'https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&amp;subset=latin-ext' );
 		
-		wp_enqueue_style( 'csdd-icons', get_template_directory_uri() . '/icons17/style.css' );
+		wp_enqueue_style( 'font-awesome', 'https://use.fontawesome.com/releases/v5.3.1/css/all.css' );
 		
 		wp_enqueue_style( 'csdd-style', get_stylesheet_uri() );
 		

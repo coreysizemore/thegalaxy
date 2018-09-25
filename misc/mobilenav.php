@@ -19,7 +19,7 @@
 	
 ?>
 
-	<a href="#" id="mobileopen"><span class="icon icon-menu"></span></a>
+	<a href="#" id="mobileopen"><i class="fas fa-bars"></i></a>
 
 </div>
 
@@ -27,7 +27,7 @@
 	
 	<div class="mobile_nav_wrapper">
 	
-		<a href="#" id="mobileclose"><span class="icon icon-close"></span></a>
+		<a href="#" id="mobileclose"><i class="fas fa-times"></i></a>
 		
 		<nav id="main_nav">
 		

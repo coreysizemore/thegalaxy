@@ -15,8 +15,8 @@
 	));
 	
 	register_sidebar(array(
-	  'name' => 'Attention Box 1',
-	  'id' => 'announcement-sidebar',
+	  'name' => 'Attention Box Top',
+	  'id' => 'attention-sidebar-1',
 	  'description' => 'Widgets in this area will be shown in the sidebar.',
 	  'before_widget' => '<div id="%1$s">',
 	  'after_widget'  => '</div>',  
@@ -35,8 +35,8 @@
 	));
 	
 	register_sidebar(array(
-	  'name' => 'Attention Box 2',
-	  'id' => 'appointment-sidebar',
+	  'name' => 'Attention Box Bottom',
+	  'id' => 'attention-sidebar-2',
 	  'description' => 'Widgets in this area will be shown in the sidebar.',
 	  'before_widget' => '<div id="%1$s">',
 	  'after_widget'  => '</div>',  
