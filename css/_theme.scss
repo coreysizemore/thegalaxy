@@ -1,7 +1,7 @@
 /* html */
 
 * {
-  -webkit-font-smoothing: subpixel-antialiased; 
+	-webkit-font-smoothing: subpixel-antialiased; 
 }
 
 html {
@@ -12,11 +12,11 @@ html {
 /* body */
 
 body {
-  background: $background;
-  font-family: $primary_font;
-  font-weight: $primary_weight;
-  font-size: $primary_size;
-  height: 100%;
+	background: $background;
+	font-family: $primary_font;
+	font-weight: $primary_weight;
+	font-size: $primary_size;
+	height: 100%;
 }
 
 /* login page */
@@ -566,7 +566,7 @@ header {
 					display: block;
 					font-size: 24px;
 					font-weight: 500;
-					padding-top: 40px;
+					padding: 40px 20px 0px 20px;
 					text-decoration: none;
 					@include transition(.1s);
 				}

@@ -73,4 +73,28 @@
 	
 	add_action( 'wp_enqueue_scripts', 'myphpinformation_scripts' );
 	
+	function remove_toolbar_items($wp_adminbar) {
+		$wp_adminbar->remove_node('wpseo-menu');
+		$wp_adminbar->remove_node('comments');
+		$wp_adminbar->remove_node('wp-logo');
+	}
+	
+	add_action('admin_bar_menu', 'remove_toolbar_items', 999);
+	
+	function add_toolbar_items($wp_admin_bar) {
+		$wp_admin_bar->add_node( array(
+			'id'		=> 'themesettings',
+			'title' => 'Theme Settings',
+			'href' => get_site_url() . '/wp-admin/admin.php?page=theme-settings',
+		) );
+		
+		$wp_admin_bar->add_node( array(
+			'id'		=> 'websitecontent',
+			'title' => 'Website Content',
+			'href' => get_site_url() . '/wp-admin/admin.php?page=website-content',
+		) );
+	}
+	
+	add_action('admin_bar_menu', 'add_toolbar_items', 999);
+	
 ?>
