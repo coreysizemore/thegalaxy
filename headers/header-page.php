@@ -5,29 +5,53 @@
 		@subpackage thegalaxy
 	*/
 	
-	if( get_field('member_login_bar', 'options') ):
+	// page header starts here
+	
+	if( get_field('display_search', 'options')):
+
+		get_search_form();
+
+	endif;
+	
+	if( get_field('utilize_login_bar', 'options') == 'display' ):
 	
 		get_template_part( 'misc/loggedin' );
 	
 	endif;
+	
+	if( get_field('utilize_top_bar', 'options') == 'display' ):
+	
+		get_template_part( 'misc/topbar' );
+	
+	endif;
 
-	echo '<header class="header_page header_page_home page_default_image ';
-	
-	basename(get_permalink());
-	
-	echo '" data-stellar-background-ratio="0.9">';
-	
-	get_template_part( 'sidebars/sidebar' , 'contact-information' );
+	echo '<header id="header_page">';
 	
 	if( get_field('imageslideshow_overlay', 'options') ):
-		
+	
 		echo '<div class="image_overlay"></div>';
-		
+	
 	endif;
-		
-	get_template_part( 'headers/header' , 'nav' );
-
-	echo '<div id="page_title" data-stellar-ratio="0.75"><h1 class="heading">';
+	
+	if( get_field('utilize_nav_bar', 'options') == 'display' ):
+	
+		get_template_part( 'misc/primarynav' );
+	
+	endif;
+	
+	if( get_field('back_page_heading_location', 'options') == 'left' ):
+	
+		echo '<div id="page_title" class="page_title_left"><h1 class="heading">';
+	
+	elseif( get_field('back_page_heading_location', 'options') == 'right' ):
+	
+		echo '<div id="page_title" class="page_title_right"><h1 class="heading">';
+	
+	else :
+	
+		echo '<div id="page_title" class="page_title_center"><h1 class="heading">';
+	
+	endif;
 	
 	echo csdd_the_title();
 		
@@ -39,15 +63,15 @@
 
 	endif;
 
-	echo '</div></header>';
-		
-	echo '<header class="header_page header_page_mobile page_default_image ';
-		
-	echo basename(get_permalink());
-		
-	echo '">';
-
-	get_template_part( 'navs/nav', 'mobile' );
+	echo '</header>';
+	
+	
+	
+	// mobile page header starts here
+	
+	echo '<header id="header_page_mobile">';
+	
+	get_template_part( 'misc/mobilenav' );
 	
 	if( get_field('imageslideshow_overlay', 'options') ):
 		
@@ -56,17 +80,17 @@
 	endif;
 	
 	echo '<div id="page_title"><h1 class="heading">';
-		
+	
 	echo csdd_the_title();
 		
 	echo '</h1>';
 
 	if(get_field('page_sub_heading')):
-
+		
 		echo '<h2 class="subheading">' . get_field('page_sub_heading') . '</h2>';
 
 	endif;
-				
-	echo '</div></header>';
-		
+	
+	echo '</header>';
+	
 ?>

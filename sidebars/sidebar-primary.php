@@ -13,205 +13,141 @@
 		
 		echo '</div>';
 	
-	elseif ( get_field('business_information', 'options') ):
-	
-		echo '<div class="sidebar">';
-					
-			if( get_field('business_information', 'options')):
-						
-				if( have_rows('business_information', 'options') ):
-					
-					while ( have_rows('business_information', 'options') ) : the_row();
-						
-						echo '<div class="office_information_wrapper">';
-						
-						if( get_sub_field('office_title', 'options')):
-						
-							echo '<h3>';
-								
-							the_sub_field('office_title', 'options');
-								        
-							echo '</h3>';
-							
-						endif;
-						
-						echo '<ul class="office_hours">';
-						
-						if( get_sub_field('monday', 'options')):
-						
-							echo '<li><span>Monday:</span><span>';
-								        
-							the_sub_field('monday', 'options');
-							
-							echo '</li>';
-						
-						endif;
-						
-						if( get_sub_field('tuesday', 'options')):
-							
-							echo '<li><span>Tuesday:</span><span>';
-								        
-							the_sub_field('tuesday', 'options');
-							
-							echo '</li>';
-						
-						endif;
-						
-						if( get_sub_field('wednesday', 'options')):
-							
-							echo '<li><span>Wednesday:</span><span>';
-								        
-							the_sub_field('wednesday', 'options');
-							
-							echo '</li>';
-						
-						endif;
-						
-						if( get_sub_field('thursday', 'options')):
-							
-							echo '<li><span>Thursday:</span><span>';
-								        
-							the_sub_field('thursday', 'options');
-							
-							echo '</li>';
-						
-						endif;
-						
-						if( get_sub_field('friday', 'options')):
-							
-							echo '<li><span>Friday:</span><span>';
-							
-							the_sub_field('friday', 'options');
-							
-							echo '</li>';
-						
-						endif;
-						
-						if( get_sub_field('saturday', 'options')):
-							
-							echo '<li><span>Saturday:</span><span>';
-								        
-							the_sub_field('saturday', 'options');
-							
-							echo '</li>';
-						
-						endif;
-						
-						if( get_sub_field('sunday', 'options')):
-							
-							echo '<li><span>Sunday:</span><span>';
-								        
-							the_sub_field('sunday', 'options');
-							        
-							echo '</li>';
-						
-						endif;
-						
-						if( get_sub_field('hours_note', 'options')):
-						
-							echo '<p>';
-								
-							the_sub_field('hours_note', 'options');
-								
-							echo '</p>';
-							
-						endif;
-						
-						echo '</ul>';
-						
-						echo '<ul class="contact_info">';
-						
-						if( get_sub_field('office_address', 'options') || get_sub_field('office_address_cont', 'options') ):
-						
-							echo '<li>';
-							
-							the_sub_field('office_address', 'options');
-							
-							echo ' ';
-							
-							the_sub_field('office_address_cont', 'options');
-							
-							echo '</li>';
-						
-						endif;
-						
-						if( get_sub_field('office_city', 'options') || get_sub_field('office_state', 'options') || get_sub_field('office_zipcode', 'options') ):
-						
-							echo '<li>';
-							
-							the_sub_field('office_city', 'options');
-							
-							echo ', ';
-							
-							the_sub_field('office_state', 'options');
-							
-							echo ' ';
-							
-							the_sub_field('office_zipcode', 'options');
-							
-							echo '</li>';
-						
-						endif;
-						
-						echo '</ul>';
-						
-						echo '<ul class="contact_info">';
-						
-						if( get_sub_field('office_phone', 'options')):
-						
-							echo '<li><a href="tel:';
-							
-							the_sub_field('office_phone', 'options');
-							
-							echo '" target="_blank">';
-							
-							the_sub_field('office_phone', 'options');
-							
-							echo '</a></li>';
-							
-						endif;
-						
-						if( get_sub_field('office_fax', 'options')):
-						
-							echo '<li>Fax: ';
-						
-							the_sub_field('office_fax', 'options');
-						
-							echo '</li>';
-							
-						endif;
-						
-						if( get_sub_field('office_email', 'options')):
-							
-							echo '<li><a href="mailto:';
-						
-							the_sub_field('office_email', 'options');
-						
-							echo '" target="_blank">';
-						
-							the_sub_field('office_email', 'options');
-						
-							echo '</a></li>';
-							
-						endif;
-							
-						echo '</ul>';
-						
-						echo '</div>';
-							
-					endwhile;
-							
-				else :
-						
-				endif;
-					
-			endif; 
-		
-		echo '</div>';
-	
 	else :
 	
-		echo '<p>You need to drag a widget into your sidebar in the WordPress Admin.</p>';
+		echo '<div class="sidebar">';
+						
+		echo '<div class="business_information_wrapper">';
+		
+		if( get_field('hours_title', 'options')):
+		
+			echo '<h3>';
+				
+			the_field('hours_title', 'options');
+				        
+			echo '</h3>';
+			
+		endif;
+		
+		echo '<ul class="business_hours">';
+		
+		if( get_field('monday_hours', 'options')):
+		
+			echo '<li><span>Monday:</span><span>';
+				        
+			the_field('monday_hours', 'options');
+			
+			echo '</li>';
+		
+		endif;
+		
+		if( get_field('tuesday_hours', 'options')):
+			
+			echo '<li><span>Tuesday:</span><span>';
+				        
+			the_field('tuesday_hours', 'options');
+			
+			echo '</li>';
+		
+		endif;
+		
+		if( get_field('wednesday_hours', 'options')):
+			
+			echo '<li><span>Wednesday:</span><span>';
+				        
+			the_field('wednesday_hours', 'options');
+			
+			echo '</li>';
+		
+		endif;
+		
+		if( get_field('thursday_hours', 'options')):
+			
+			echo '<li><span>Thursday:</span><span>';
+				        
+			the_field('thursday_hours', 'options');
+			
+			echo '</li>';
+		
+		endif;
+		
+		if( get_field('friday_hours', 'options')):
+			
+			echo '<li><span>Friday:</span><span>';
+			
+			the_field('friday_hours', 'options');
+			
+			echo '</li>';
+		
+		endif;
+		
+		if( get_field('saturday_hours', 'options')):
+			
+			echo '<li><span>Saturday:</span><span>';
+				        
+			the_field('saturday_hours', 'options');
+			
+			echo '</li>';
+		
+		endif;
+		
+		if( get_field('sunday_hours', 'options')):
+			
+			echo '<li><span>Sunday:</span><span>';
+				        
+			the_field('sunday_hours', 'options');
+			        
+			echo '</li>';
+		
+		endif;
+		
+		if( get_field('hours_note', 'options')):
+		
+			echo '<p>';
+				
+			the_field('hours_note', 'options');
+				
+			echo '</p>';
+			
+		endif;
+		
+		echo '</ul>';
+		
+		echo '<div class="contact_info">';
+		
+		if( get_field('business_address','options') ):
+			
+			get_template_part( 'misc/businessaddress' );
+		
+		endif;
+		
+		echo '</div>';
+		
+		echo '<nav class="contact_info">';
+		
+		if( get_field('phone_number','options') ):
+			
+			get_template_part( 'misc/phonenumber' );
+		
+		endif;
+		
+		if( get_field('fax_number','options') ):
+			
+			get_template_part( 'misc/faxnumber' );
+		
+		endif;
+		
+		if( get_field('email_address','options') ):
+			
+			get_template_part( 'misc/emailaddress' );
+		
+		endif;
+			
+		echo '</nav>';
+		
+		echo '</div>';			
+		
+		echo '</div>';
 		
 	endif; 
 

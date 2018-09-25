@@ -25,8 +25,6 @@
 		
 		wp_enqueue_script( 'scroll-fix', get_template_directory_uri() . '/js/scrollfix.min.js' );
 		
-		wp_enqueue_script( 'stellar', get_template_directory_uri() . '/js/stellar.min.js' );
-		
 		wp_enqueue_script( 'fancybox', get_template_directory_uri() . '/fancybox/fancybox.min.js' );
 	
 		wp_enqueue_script( 'csdd-scripts', get_template_directory_uri() . '/js/scripts.min.js' );

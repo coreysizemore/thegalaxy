@@ -4,6 +4,16 @@
 		@package WordPress
 		@subpackage thegalaxy
 	*/
+	
+	if( get_field('secondary_navigation') ):
+	
+		if ( has_nav_menu( 'secondary_nav' ) ):
+		
+	    	echo get_template_part( 'misc/secondarynav' );
+	    	    	
+	    endif;
+    
+    endif;
 	 
 	get_template_part( 'sidebars/sidebar' , 'announcement' );
 
@@ -25,7 +35,7 @@
 	
 		if( get_field('sidebar_selection') == 'right' ):
 	
-			echo '<div class="col_9"><div class="content">';
+			echo '<div class="col_8"><div class="content">';
 	
 			get_template_part( 'loops/loop', 'page' );
 
@@ -47,7 +57,7 @@
 				
 			endif;
 
-			echo '</div></div><div class="col_3">';
+			echo '</div></div><div class="col_4">';
 			
 			get_template_part( 'sidebars/sidebar' , 'primary' );
 			
@@ -85,11 +95,11 @@
 		
 		if( get_field('sidebar_selection') == 'left' ):
 		
-			echo '<div class="col_3">';
+			echo '<div class="col_4">';
 			
 			get_template_part( 'sidebars/sidebar' , 'primary' );
 			
-			echo '</div><div class="col_9"><div class="content">';
+			echo '</div><div class="col_8"><div class="content">';
 			
 			get_template_part( 'loops/loop', 'page' );
 		

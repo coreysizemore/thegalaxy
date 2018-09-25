@@ -4,40 +4,54 @@
 		@package WordPress
 		@subpackage thegalaxy
 	*/
-	 
-	if( get_field('member_login_bar', 'options') ):
+	
+	// blog header starts here
+	
+	if( get_field('display_search', 'options')):
+
+		get_search_form();
+
+	endif;
+	
+	if( get_field('utilize_login_bar', 'options') == 'display' ):
 	
 		get_template_part( 'misc/loggedin' );
 	
 	endif;
-
-	echo '<header class="header_page header_page_home page_default_image ';
 	
-	basename(get_permalink());
+	if( get_field('utilize_top_bar', 'options') == 'display' ):
 	
-	echo '" data-stellar-background-ratio="0.9">';
+		get_template_part( 'misc/topbar' );
 	
-	get_template_part( 'sidebars/sidebar' , 'contact-information' );
-	
-	if( get_field('imageslideshow_overlay', 'options') ):
-		
-		echo '<div class="image_overlay"></div>';
-		
 	endif;
 
-	get_template_part( 'headers/header' , 'nav' );
-				
-	echo '<div id="page_title" data-stellar-ratio="0.75"><h1 class="heading">Latest News</h1><h2 class="subheading">Below is our latest news entries.</h2></div>';	
+	echo '<header id="header_page">';
 	
+	if( get_field('imageslideshow_overlay', 'options') ):
+	
+		echo '<div class="image_overlay"></div>';
+	
+	endif;
+	
+	if( get_field('utilize_nav_bar', 'options') == 'display' ):
+	
+		get_template_part( 'misc/primarynav' );
+	
+	endif;
+		
+	echo '<div id="page_title"><h1 class="heading">Latest News</h1>';
+
+	echo '<h2 class="subheading">Below is our latest news entries.</h2>';
+
 	echo '</header>';
-
-	echo '<header class="header_page header_page_mobile page_default_image blog ';
 	
-	basename(get_permalink());
 	
-	echo '">';
 	
-	get_template_part( 'navs/nav', 'mobile' );
+	// mobile page header starts here
+	
+	echo '<header id="header_page_mobile">';
+	
+	get_template_part( 'misc/mobilenav' );
 	
 	if( get_field('imageslideshow_overlay', 'options') ):
 		
@@ -45,8 +59,10 @@
 		
 	endif;
 	
-	echo '<div id="page_title"><h1 class="heading">Latest News</h1><h2 class="subheading">Below is our latest news entries.</h2></div>';
-	
+	echo '<div id="page_title"><h1 class="heading">Latest News</h1>';
+
+	echo '<h2 class="subheading">Below is our latest news entries.</h2>';
+
 	echo '</header>';
 	
 ?>

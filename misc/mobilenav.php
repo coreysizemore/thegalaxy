@@ -9,7 +9,7 @@
 	
 		echo '<div class="mobile_navigation_bar">';
 		
-		get_template_part( 'logos/logo', 'mobile' );
+		get_template_part( 'misc/mobilelogo' );
 	
 	else :
 	
@@ -47,7 +47,19 @@
 				
 		</div>
 		
-		<?php get_template_part( 'navs/nav', 'social-mobile' ); ?>
+		<?php
+		
+			if( get_field('social_media','options') ):
+		
+				echo '<nav id="social_nav">';
+				
+				get_template_part( 'misc/sociallinks' );
+				
+				echo '</nav>';
+			
+			endif;	
+			
+		?>
 		
 		<div class="bottom_spacing"></div>
 	

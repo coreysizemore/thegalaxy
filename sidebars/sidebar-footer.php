@@ -61,7 +61,7 @@
 	
 		echo '<footer><div class="container"><div class="row gutters"><div class="col_12">';
 						
-		get_template_part( 'logos/logo', 'footer' );
+		get_template_part( 'misc/footerlogo' );
 						
 		echo '</div></div></div></footer>';
 		

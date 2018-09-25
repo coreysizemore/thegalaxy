@@ -2,71 +2,28 @@
 	
 	/* header */
 	header {
+		background: url('../img/home_mobile.jpg') no-repeat;
 		height: 500px;
-		background-size: 100%;
+		background-size: 120%;
 		background-attachment: fixed;
-	}
-	
-	header.home_default_image {
-		background: url('../img/home_mobile.jpg') no-repeat;
-		background-size: 100%;
-		background-attachment: fixed;
-	}
-	
-	header.header_home {
-		display: none;
-	}
-	
-	header.header_mobile_home {
-		display: block;
-	}
-	
-	header.header_page.page_default_image {
-		background: url('../img/home_mobile.jpg') no-repeat;
-		background-size: 100%;
-		background-attachment: fixed;
-	}
-	
-	header.header_page {
-		background-size: 100%;
-		background-attachment: fixed;
-		height: 300px;
 		
-		#page_title {
-			
-			h1.heading {
-				padding-top: 90px;
-			}
-			
-			h2.subheading {
-				width: 300px;
+		&#header_page_mobile {
+			#nav_bar {
+				&.full_navigation + #page_title {
+					margin-top: -25px;
+				}
 			}
 		}
 	}
 	
-	header.header_page.header_page_home {
+	header#header_home,
+	header#header_page {
 		display: none;
 	}
 	
-	header.header_page.header_page_mobile {
+	header#header_home_mobile,
+	header#header_page_mobile {
 		display: block;
-	}
-	
-	/* home page logo */
-
-	#home_logo {
-		margin-top: 100px;
-		margin-left: -200px;
-		top: 0%;
-		width: 400px;
-		
-		#logo_home {
-			margin-bottom: 10px;
-			
-			img {
-				width: 400px;
-			}
-		}
 	}
 	
 	/* search */

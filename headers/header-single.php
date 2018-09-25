@@ -5,60 +5,64 @@
 		@subpackage thegalaxy
 	*/
 	
-	if( get_field('member_login_bar', 'options') ):
+	// single header starts here
+	
+	if( get_field('display_search', 'options')):
+
+		get_search_form();
+
+	endif;
+	
+	if( get_field('utilize_login_bar', 'options') == 'display' ):
 	
 		get_template_part( 'misc/loggedin' );
 	
 	endif;
+	
+	if( get_field('utilize_top_bar', 'options') == 'display' ):
+	
+		get_template_part( 'misc/topbar' );
+	
+	endif;
 
-	echo '<header class="header_page header_page_home page_default_image ';
+	echo '<header id="header_page">';
 	
-	basename(get_permalink());
+	if( get_field('imageslideshow_overlay', 'options') ):
 	
-	echo '" data-stellar-background-ratio="0.9">';
+		echo '<div class="image_overlay"></div>';
 	
-	get_template_part( 'sidebars/sidebar' , 'contact-information' );
+	endif;
+	
+	if( get_field('utilize_nav_bar', 'options') == 'display' ):
+	
+		get_template_part( 'misc/primarynav' );
+	
+	endif;
+		
+	echo '<div id="page_title"><h1 class="heading">Latest News</h1>';
+
+	echo '<h2 class="subheading">Below is our latest news entries.</h2>';
+
+	echo '</header>';
+	
+	
+	
+	// mobile page header starts here
+	
+	echo '<header id="header_page_mobile">';
+	
+	get_template_part( 'misc/mobilenav' );
 	
 	if( get_field('imageslideshow_overlay', 'options') ):
 		
 		echo '<div class="image_overlay"></div>';
 		
 	endif;
-		
-	get_template_part( 'headers/header' , 'nav' );
-
-	echo '<div id="page_title" data-stellar-ratio="0.75"><h1 class="heading">';
 	
-	echo csdd_the_title();
-		
-	echo '</h1>';
+	echo '<div id="page_title"><h1 class="heading">Latest News</h1>';
 
-	echo '<h2 class="subheading">' . get_the_date() . '</h2>';
+	echo '<h2 class="subheading">Below is our latest news entries.</h2>';
 
-	echo '</div></header>';
-		
-	echo '<header class="header_page header_page_mobile page_default_image ';
-		
-	echo basename(get_permalink());
-		
-	echo '">';
-
-	get_template_part( 'navs/nav', 'mobile' );
+	echo '</header>';
 	
-	if( get_field('imageslideshow_overlay', 'options') ):
-		
-		echo '<div class="image_overlay"></div>';
-		
-	endif;
-	
-	echo '<div id="page_title"><h1 class="heading">';
-		
-	echo csdd_the_title();
-		
-	echo '</h1>';
-
-	echo '<h2 class="subheading">' . get_the_date() . '</h2>';
-				
-	echo '</div></header>';
-		
 ?>
