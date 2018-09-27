@@ -5,7 +5,7 @@
 		@subpackage thegalaxy
 	*/
 
-	echo '<div class="main blog_single">';
+	echo '<div id="main" class="blog_single">';
 	
 	if ( function_exists('yoast_breadcrumb') ):
 		

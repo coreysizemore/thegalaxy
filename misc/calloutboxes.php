@@ -12,7 +12,7 @@
 			
 		$count = count($items);
 			
-		echo '<div class="call_out_boxes"><div class="container"><div class="row gutters"><div class="col_12">';
+		echo '<div id="call_out_boxes"><div class="container"><div class="row gutters"><div class="col_12">';
 						
 		foreach( $items as $cob ):
 				

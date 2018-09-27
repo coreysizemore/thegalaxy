@@ -5,7 +5,7 @@
 		@subpackage thegalaxy
 	*/
 
-	echo '<div class="main blog_home ';
+	echo '<div id="main" class="blog_home ';
 	
 	echo basename(get_permalink());
 	

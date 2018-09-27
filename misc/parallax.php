@@ -2,7 +2,7 @@
 	
 	if(get_field('parallax_feature') == 'custom'):
 	
-		echo '<div class="parallax">';
+		echo '<div id="parallax">';
 	
 			if(get_field('parallax_content')):
 					
@@ -16,7 +16,7 @@
 	
 		if(get_field('use_parallax_feature','options')):
 	
-			echo '<div class="parallax">';
+			echo '<div id="parallax">';
 
 			if(get_field('parallax','options')):
 					

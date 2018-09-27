@@ -835,8 +835,13 @@ header {
 			}
 		}
 		
+		&.top_navigation {
+			border-bottom: 1px solid rgba(255,255,255,.1);
+		}
+		
 		&.bottom_navigation {
 			bottom: 0px;
+			border-top: 1px solid rgba(255,255,255,.1);
 		}
 		
 		&.full_navigation {
@@ -1420,7 +1425,7 @@ header#header_page_mobile {
 
 /* call out boxes */
 
-.call_out_boxes {
+#call_out_boxes {
 	background: $colorthree;
 	padding: 50px 0px;
 	
@@ -1557,7 +1562,7 @@ header#header_page_mobile {
 
 /* main */
 
-.main {
+#main {
 	padding: 60px 0;
 	position: relative;
 }
@@ -2043,7 +2048,7 @@ article.blog_entry {
 
 /* parallax */
 
-.parallax {
+#parallax {
 	background: url('../img/parallax.jpg');
 	background-size: cover;
 	background-attachment: fixed;
@@ -2356,6 +2361,12 @@ footer {
 					display: block;
 					padding: 0px 10px;
 					text-decoration: none;
+					@include transition(.1s);
+				}
+				
+				a:hover,
+				a:active {
+					opacity: .5;
 				}
 			}
 		}
