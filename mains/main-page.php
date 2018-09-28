@@ -147,9 +147,13 @@
 
 	get_template_part( 'misc/parallax' );
 
-	if(get_field('appointment_feature')):
-
-		get_template_part( 'sidebars/sidebar' , 'appointment' );
+	if( get_field('attention_bottom' )):
+	
+		if ( is_active_sidebar( 'attention-sidebar-2' ) ):
+	 
+			get_template_part( 'sidebars/sidebar' , 'attentionbottom' );
+		
+		endif;
 		
 	endif;
 					

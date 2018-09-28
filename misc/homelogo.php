@@ -117,7 +117,7 @@
 	
 		if( get_field('home_logo_text', 'options')):
 		
-			echo '<div class="home_logo_text_wrapper">';
+			echo '<div id="home_logo_text_wrapper">';
 		
 				echo the_field('home_logo_text', 'options');
 			

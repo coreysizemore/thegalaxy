@@ -3,12 +3,12 @@
 	/*
 		Widget support for a sidebars
 	*/
-
+	
 	register_sidebar(array(
-	  'name' => 'Contact Information (Optional)',
-	  'id' => 'contact-information-sidebar',
+	  'name' => 'Attention Header',
+	  'id' => 'attention-sidebar-3',
 	  'description' => 'Widgets in this area will be shown in the sidebar.',
-	  'before_widget' => '<div id="%1$s" class="contact_info_ul">',
+	  'before_widget' => '<div id="%1$s">',
 	  'after_widget'  => '</div>',  
 	  'before_title' => '<h3>',
 	  'after_title' => '</h3>'

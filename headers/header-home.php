@@ -24,6 +24,12 @@
 		get_template_part( 'misc/topbar' );
 	
 	endif;
+	
+	if ( is_active_sidebar( 'attention-sidebar-3' ) ):
+	 
+		get_template_part( 'sidebars/sidebar' , 'attentionheader' );
+	
+	endif;
 
 	if( get_field('home_selection', 'options') == 'full' ):
 	

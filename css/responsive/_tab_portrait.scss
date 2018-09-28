@@ -1,6 +1,13 @@
 @media (min-width: 768px) and (max-width: 979px) {
 	
+	/* attention header */
+	
+	#attention_bar_header {
+		display: none;	
+	}
+	
 	/* header */
+	
 	header {
 		background: url('../img/home_mobile.jpg') no-repeat;
 		height: 500px;

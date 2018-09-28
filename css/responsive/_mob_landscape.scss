@@ -24,6 +24,12 @@
 		}
 	}
 	
+	/* attention header */
+	
+	#attention_bar_header {
+		display: none;	
+	}
+	
 	/* header */
 	
 	header {
@@ -103,7 +109,7 @@
 		}
 	}
 	
-	/* search */
+	/* search form */
 	
 	#page_searchform {
 		input[type="text"] {

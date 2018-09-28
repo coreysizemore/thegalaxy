@@ -64,13 +64,11 @@ body {
 	}
 }
 
-
 /* disable page scroll */
 
 .disablepagescroll {
 	overflow: hidden;
 }
-
 
 /* search */
 
@@ -231,7 +229,7 @@ a#searchclose:visited {
 	}
 }
 
-/* top bar #141618*/
+/* top bar */
 
 #top_bar {
 	&.fullwidth,
@@ -336,7 +334,72 @@ a#searchclose:visited {
 	}
 }
 
+/* attention header */
+
+#attention_bar_header {
+	background: #141618;
+	height: 80px;
+	text-align: center;
+	
+	.attention_bar_header_content {
+		padding-top: 30px;
+		
+		h3 {
+			color: $light_font;
+			display: inline-block;
+			font-size: 16px;
+			vertical-align: middle;
+		}
+		
+		div {
+			display: inline-block;
+			margin-left: 20px;
+			vertical-align: middle;
+			
+			ul {
+				li {
+					a:link,
+					a:visited {
+						display: inline-block;
+						color: $colortwo;
+						font-size: 16px;
+						font-weight: 500;
+						line-height: 20px;
+						text-decoration: none;
+						@include transitions(opacity, .5s, ease);
+					}
+					
+					a:hover,
+					a:active {
+						opacity: .5;
+					}
+				}
+			}	
+		}
+	}
+	
+	&.full_width {
+		padding: 0px 20px;
+	}
+}
+
 /* adjustment to full height header */
+
+#loginbar + #top_bar + #attention_bar_header + header#header_home.full {
+	height: calc(100% - 139px);
+}
+
+#top_bar + #attention_bar_header + header#header_home.full {
+	height: calc(100% - 115px);
+}
+
+#loginbar + #attention_bar_header + header#header_home.full {
+	height: calc(100% - 104px);
+}
+
+#attention_bar_header + header#header_home.full {
+	height: calc(100% - 80px);
+}
 
 #loginbar + #top_bar + header#header_home.full {
 	height: calc(100% - 59px);
@@ -351,7 +414,7 @@ a#searchclose:visited {
 }
 
 
-/* home page header */
+/* home page header & primary navigation */
 
 header {
 	background: url('../img/home.jpg') no-repeat;
@@ -1399,9 +1462,6 @@ header#header_page_mobile {
 	}
 }
 
-
-
-
 /* breadcrumbs */
 
 .breadcrumb_wrapper {
@@ -1664,6 +1724,8 @@ header#header_page_mobile {
 	}
 }
 
+/* sidebar */
+
 .sidebar {
 	margin-bottom: 30px;
 	
@@ -1745,6 +1807,8 @@ header#header_page_mobile {
 	}
 }
 
+/* hr */
+
 hr.divider {
 	background: $colorone;
 	border: 0px;
@@ -1764,6 +1828,7 @@ hr {
 }
 
 /* edit button */
+
 .edit_button {
 	padding: 10px 0;
 	text-align: center;
@@ -1784,7 +1849,7 @@ hr {
 	}
 }
 
-/* search */
+/* search form */
 
 #page_searchform {
 	input[type="text"] {
@@ -2201,7 +2266,6 @@ article.blog_entry {
 		}
 	}
 }
-
 
 /* footer */
 
