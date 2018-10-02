@@ -627,7 +627,7 @@ header {
 				a:visited {
 					color: $light_font;
 					display: block;
-					font-size: 24px;
+					font-size: 22px;
 					font-weight: 500;
 					padding: 40px 20px 0px 20px;
 					text-decoration: none;
@@ -1134,16 +1134,22 @@ header {
 		
 		img {
 			height: 150px;
+			margin-bottom: 40px;
 			width: auto;
 		}
 		
 		#home_logo_text_wrapper {
-			margin: 40px 0px 20px 0px;
+			margin: 0px 0px 20px 0px;
 			
 			h1,h2,h3,h4 {
 				color: #ffffff;
 				font-weight: 500;
 				font-size: 18px;
+				margin-bottom: 10px;
+			}
+			
+			h1 {
+				font-size: 32px;
 			}
 		}
 		
@@ -1281,6 +1287,21 @@ header#header_page_mobile {
 			img {
 				height: 50px;
 				margin-left: 10px;
+			}
+		}
+		
+		h1 {
+			height: 50px;
+			line-height: 50px;
+			
+			a:link,
+			a:visited {
+				color: $light_font;
+				display: block;
+				font-size: 22px;
+				font-weight: 500;
+				margin-left: 10px;
+				text-decoration: none;
 			}
 		}
 		
@@ -2358,7 +2379,7 @@ footer {
 		
 		h1 {
 			font-size: 24px;
-			font-weight: 400;
+			font-weight: 500;
 			line-height: 32px;
 			
 			a:link,
