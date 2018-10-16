@@ -14,7 +14,7 @@
 		
 	elseif(get_field('parallax_feature') == 'default'):
 	
-		if(get_field('use_parallax_feature','options')):
+		if(get_field('use_parallax_feature','options') == 'display'):
 	
 			echo '<div id="parallax">';
 

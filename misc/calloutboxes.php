@@ -4,7 +4,7 @@
 	
 		$items = get_field('call_out_boxes','option');
 		
-		if( get_field('shuffle_call_out_boxes') ):
+		if( get_field('shuffle_call_out_boxes') == 'yes' ):
 		
 			shuffle($items);
 			

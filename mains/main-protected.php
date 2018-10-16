@@ -7,7 +7,7 @@
 	 
 	if(is_user_logged_in()):
 
-		if( get_field('secondary_navigation') ):
+		if( get_field('secondary_navigation') == 'display' ):
 	
 			if ( has_nav_menu( 'secondary_nav' ) ):
 			
@@ -17,10 +17,16 @@
 	    
 	    endif;
 	
-		if( get_field('display_call_out_boxes') ):
+		if( get_field('display_call_out_boxes') == 'display' ):
 	
 			get_template_part( 'misc/calloutboxes' );
 			
+		endif;
+		
+		if( get_field('select_a_custom_element') != 'none' && get_field('custom_element_location') == 'above' ):
+			
+			get_template_part( 'custom/customelements' );
+					
 		endif;
 	
 		echo '<div id="main" class="';
@@ -35,7 +41,7 @@
 			
 		endif;
 	
-		if( get_field('default_editor')):
+		if( get_field('default_editor') == 'display'):
 		
 			echo '<div class="default_editor"><div class="container"><div class="row gutters">';
 		
@@ -44,20 +50,26 @@
 				echo '<div class="col_8"><div class="content">';
 		
 				get_template_part( 'loops/loop', 'page' );
-	
-				if( get_field('gallery') ):
 				
+				if( get_field('select_a_custom_element') != 'none' && get_field('custom_element_location') == 'inside' ):
+			
+					get_template_part( 'custom/customelements' );
+					
+				endif;
+	
+				if( have_rows('gallery_content') ):
+			
 					get_template_part( 'misc/gallery' );
 					
 				endif;
 	
-				if( get_field('accordion') ):
+				if( have_rows('accordion_content') ):
 				
 					get_template_part( 'misc/accordion' );
 					
 				endif;
 	
-				if( get_field('tabs') ):
+				if( have_rows('tabs_content') ):
 				
 					get_template_part( 'misc/tabs' );
 					
@@ -77,19 +89,25 @@
 				
 				get_template_part( 'loops/loop', 'page' );
 				
-				if( get_field('gallery') ):
-				
-					get_template_part( 'misc/gallery' );
+				if( get_field('select_a_custom_element') != 'none' && get_field('custom_element_location') == 'inside' ):
+			
+					get_template_part( 'custom/customelements' );
 					
 				endif;
 				
-				if( get_field('accordion') ):
+				if( have_rows('gallery_content') ):
+			
+					get_template_part( 'misc/gallery' );
+					
+				endif;
+	
+				if( have_rows('accordion_content') ):
 				
 					get_template_part( 'misc/accordion' );
 					
 				endif;
-			
-				if( get_field('tabs') ):
+	
+				if( have_rows('tabs_content') ):
 				
 					get_template_part( 'misc/tabs' );
 					
@@ -108,20 +126,26 @@
 				echo '</div><div class="col_8"><div class="content">';
 				
 				get_template_part( 'loops/loop', 'page' );
-			
-				if( get_field('gallery') ):
 				
+				if( get_field('select_a_custom_element') != 'none' && get_field('custom_element_location') == 'inside' ):
+			
+					get_template_part( 'custom/customelements' );
+					
+				endif;
+			
+				if( have_rows('gallery_content') ):
+			
 					get_template_part( 'misc/gallery' );
 					
 				endif;
-				
-				if( get_field('accordion') ):
+	
+				if( have_rows('accordion_content') ):
 				
 					get_template_part( 'misc/accordion' );
 					
 				endif;
-			
-				if( get_field('tabs') ):
+	
+				if( have_rows('tabs_content') ):
 				
 					get_template_part( 'misc/tabs' );
 					
@@ -146,10 +170,16 @@
 		endif;
 		
 		echo '</div>';
+		
+		if( get_field('select_a_custom_element') != 'none' && get_field('custom_element_location') == 'below' ):
+			
+			get_template_part( 'custom/customelements' );
+					
+		endif;
 	
 		get_template_part( 'misc/parallax' );
 	
-		if( get_field('attention_bottom' )):
+		if( get_field('attention_bottom' ) == 'display'):
 	
 			if ( is_active_sidebar( 'attention-sidebar-2' ) ):
 		 

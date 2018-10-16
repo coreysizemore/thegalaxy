@@ -3,17 +3,16 @@ Theme Name: The Galaxy
 Theme URI: http://www.coreysizemore.com
 GitHub Theme URI: https://github.com/coreysizemore/thegalaxy/
 GitHub Branch: master
-Description:  Website theme by http://www.coreysizemore.com.
 Author: Corey Sizemore
 Author URI: http://www.coreysizemore.com
-Description: Website theme by http://www.coreysizemore.com.
-Version: v2.0.5
+Description: Modern website theme with multiple design choices. Check out http://www.coreysizemore.com for more information about getting a website built in this theme. Not currently avaliable for public use.
+Version: v2.0.6
 Text Domain:  thegalaxy
 */
 
 
-/* =WordPress Core
--------------------------------------------------------------- */
+/* WordPress Core */
+
 .content .alignnone {
     margin: 5px 20px 20px 0;
 }

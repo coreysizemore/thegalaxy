@@ -7,7 +7,7 @@
 	
 	// single header starts here
 	
-	if( get_field('display_search', 'options')):
+	if( get_field('display_search', 'options') == 'display'):
 
 		get_search_form();
 
@@ -27,7 +27,7 @@
 
 	echo '<header id="header_page">';
 	
-	if( get_field('imageslideshow_overlay', 'options') ):
+	if( get_field('imageslideshow_overlay', 'options') == 'enable' ):
 	
 		echo '<div class="image_overlay"></div>';
 	
@@ -39,9 +39,17 @@
 	
 	endif;
 		
-	echo '<div id="page_title"><h1 class="heading">Latest News</h1>';
+	echo '<div id="page_title"><h1 class="heading">';
+	
+	echo the_field('blogsingle_page_heading', 'options');
+	
+	echo '</h1>';
 
-	echo '<h2 class="subheading">Below is our latest news entries.</h2>';
+	echo '<h2 class="subheading">';
+	
+	echo the_field('blogsingle_page_sub_heading', 'options');
+	
+	echo '</h2>';
 
 	echo '</header>';
 	
@@ -51,17 +59,29 @@
 	
 	echo '<header id="header_page_mobile">';
 	
-	get_template_part( 'misc/mobilenav' );
+	if( get_field('utilize_nav_bar', 'options') == 'display' ):
 	
-	if( get_field('imageslideshow_overlay', 'options') ):
+		get_template_part( 'misc/mobilenav' );
+	
+	endif;
+	
+	if( get_field('imageslideshow_overlay', 'options') == 'enable' ):
 		
 		echo '<div class="image_overlay"></div>';
 		
 	endif;
 	
-	echo '<div id="page_title"><h1 class="heading">Latest News</h1>';
+	echo '<div id="page_title"><h1 class="heading">';
+	
+	echo the_field('blogsingle_page_heading', 'options');
+	
+	echo '</h1>';
 
-	echo '<h2 class="subheading">Below is our latest news entries.</h2>';
+	echo '<h2 class="subheading">';
+	
+	echo the_field('blogsingle_page_sub_heading', 'options');
+	
+	echo '</h2>';
 
 	echo '</header>';
 	

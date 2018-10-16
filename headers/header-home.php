@@ -7,7 +7,7 @@
 	
 	// primary header starts here
 	
-	if( get_field('display_search', 'options')):
+	if( get_field('display_search', 'options') == 'display'):
 
 		get_search_form();
 
@@ -147,7 +147,7 @@
 			
 	endif;
 	
-	if( get_field('imageslideshow_overlay', 'options') ):
+	if( get_field('imageslideshow_overlay', 'options') == 'enable' ):
 	
 		echo '<div class="image_overlay"></div>';
 	
@@ -169,9 +169,13 @@
 	
 	echo '<header id="header_home_mobile">';
 	
-	get_template_part( 'misc/mobilenav' );
+	if( get_field('utilize_nav_bar', 'options') == 'display' ):
 	
-	if( get_field('imageslideshow_overlay', 'options') ):
+		get_template_part( 'misc/mobilenav' );
+	
+	endif;
+	
+	if( get_field('imageslideshow_overlay', 'options') == 'enable' ):
 		
 		echo '<div class="image_overlay"></div>';
 		
