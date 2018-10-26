@@ -19,6 +19,18 @@
 	elseif( get_field('select_a_custom_element') == 'ce5' ):
 	
 		get_template_part( 'custom/customelement5' );
+		
+	elseif( get_field('select_a_custom_element') == 'ce6' ):
+	
+		get_template_part( 'custom/customelement6' );
+		
+	elseif( get_field('select_a_custom_element') == 'ce7' ):
+	
+		get_template_part( 'custom/customelement7' );
+		
+	elseif( get_field('select_a_custom_element') == 'ce8' ):
+	
+		get_template_part( 'custom/customelement8' );
 	
 	endif;
 	

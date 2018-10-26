@@ -40,8 +40,14 @@
 		echo '</nav></div></div></div></div>';
 	
 	endif;
-
-wp_footer() 
+	
+	if( get_field('custom_scripts','options') == 'utilize' ):
+		
+		echo get_field('script','options');
+		
+	endif;
+	
+	wp_footer() 
 	
 ?>
 	
