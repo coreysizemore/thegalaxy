@@ -77,6 +77,12 @@
 			
 			get_template_part( 'sidebars/sidebar' , 'primary' );
 			
+			if( get_field('select_a_custom_element') != 'none' && get_field('custom_element_location') == 'sidebar' ):
+			
+				get_template_part( 'custom/customelements' );
+						
+			endif;
+			
 			echo '</div>';
 		
 		endif;
@@ -120,6 +126,12 @@
 			echo '<div class="col_4">';
 			
 			get_template_part( 'sidebars/sidebar' , 'primary' );
+			
+			if( get_field('select_a_custom_element') != 'none' && get_field('custom_element_location') == 'sidebar' ):
+			
+				get_template_part( 'custom/customelements' );
+						
+			endif;
 			
 			echo '</div><div class="col_8"><div class="content">';
 			
