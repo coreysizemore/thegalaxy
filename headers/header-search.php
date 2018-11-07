@@ -38,8 +38,22 @@
 		get_template_part( 'misc/primarynav' );
 	
 	endif;
+	
+	if( get_field('back_page_heading_location', 'options') == 'left' ):
+	
+		echo '<div id="page_title" class="page_title_left"><h1 class="heading">';
+	
+	elseif( get_field('back_page_heading_location', 'options') == 'right' ):
+	
+		echo '<div id="page_title" class="page_title_right"><h1 class="heading">';
+	
+	else :
+	
+		echo '<div id="page_title" class="page_title_center"><h1 class="heading">';
+	
+	endif;
 		
-	echo '<div id="page_title"><h1 class="heading">Search Results</h1>';
+	echo 'Search Results</h1>';
 
 	echo '<h2 class="subheading">View your search results below.</h2>';
 

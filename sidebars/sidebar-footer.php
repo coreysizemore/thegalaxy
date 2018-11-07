@@ -65,6 +65,26 @@
 						
 		echo '</div></div></div></footer>';
 		
+	elseif( get_field('footer_type', 'options') == 'custom'):
+	
+		echo '<footer>';
+		
+		if( get_field('select_a_custom_element') != 'none' && get_field('custom_element_location') == 'footer' ):
+			
+			get_template_part( 'custom/customelements' );
+		
+		elseif( get_field('select_a_custom_element_2') != 'none' && get_field('custom_element_location_2') == 'footer' ):
+			
+			get_template_part( 'custom/customelements2' );
+			
+		elseif( get_field('select_a_custom_element_3') != 'none' && get_field('custom_element_location_3') == 'footer' ):
+			
+			get_template_part( 'custom/customelements3' );
+					
+		endif;
+		
+		echo '</footer>';
+		
 	elseif( get_field('footer_type', 'options') == 'none'):
 	
 	endif; 

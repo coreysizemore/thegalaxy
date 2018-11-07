@@ -39,7 +39,19 @@
 	
 	endif;
 		
-	echo '<div id="page_title"><h1 class="heading">';
+	if( get_field('back_page_heading_location', 'options') == 'left' ):
+	
+		echo '<div id="page_title" class="page_title_left"><h1 class="heading">';
+	
+	elseif( get_field('back_page_heading_location', 'options') == 'right' ):
+	
+		echo '<div id="page_title" class="page_title_right"><h1 class="heading">';
+	
+	else :
+	
+		echo '<div id="page_title" class="page_title_center"><h1 class="heading">';
+	
+	endif;
 	
 	echo the_field('blogsingle_page_heading', 'options');
 	

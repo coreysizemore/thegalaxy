@@ -11,7 +11,7 @@
 	
 			echo '<div id="top_bar" class="fullwidth include_both">';
 		
-			if( get_field('phone_number','options') || get_field('email_address','options')):
+			if( get_field('phone_number','options') || get_field('email_address','options') || get_field('additional_link','options')):
 			
 				echo '<div class="phone_email_wrapper">';
 			
@@ -30,6 +30,16 @@
 					echo '<nav id="email_address">';
 					
 					get_template_part( 'misc/emailaddress' );
+					
+					echo '</nav>';
+				
+				endif;
+				
+				if( get_field('additional_link','options') ):
+				
+					echo '<nav id="add_link">';
+					
+					get_template_part( 'misc/addlink' );
 					
 					echo '</nav>';
 				
@@ -55,7 +65,7 @@
 		
 			echo '<div id="top_bar" class="containerwidth include_both"><div class="container"><div class="row gutters"><div class="col_12">';
 		
-			if( get_field('phone_number','options') || get_field('email_address','options')):
+			if( get_field('phone_number','options') || get_field('email_address','options') || get_field('additional_link','options')):
 			
 				echo '<div class="phone_email_wrapper">';
 			
@@ -74,6 +84,16 @@
 					echo '<nav id="email_address">';
 					
 					get_template_part( 'misc/emailaddress' );
+					
+					echo '</nav>';
+				
+				endif;
+				
+				if( get_field('additional_link','options') ):
+				
+					echo '<nav id="add_link">';
+					
+					get_template_part( 'misc/addlink' );
 					
 					echo '</nav>';
 				
@@ -103,7 +123,7 @@
 	
 			echo '<div id="top_bar" class="fullwidth include_phoneemail">';
 		
-			if( get_field('phone_number','options') || get_field('email_address','options')):
+			if( get_field('phone_number','options') || get_field('email_address','options') || get_field('additional_link','options')):
 			
 				echo '<div class="phone_email_wrapper">';
 			
@@ -122,6 +142,16 @@
 					echo '<nav id="email_address">';
 					
 					get_template_part( 'misc/emailaddress' );
+					
+					echo '</nav>';
+				
+				endif;
+				
+				if( get_field('additional_link','options') ):
+				
+					echo '<nav id="add_link">';
+					
+					get_template_part( 'misc/addlink' );
 					
 					echo '</nav>';
 				
@@ -137,7 +167,7 @@
 		
 			echo '<div id="top_bar" class="containerwidth include_phoneemail"><div class="container"><div class="row gutters"><div class="col_12">';
 		
-			if( get_field('phone_number','options') || get_field('email_address','options')):
+			if( get_field('phone_number','options') || get_field('email_address','options') || get_field('additional_link','options')):
 			
 				echo '<div class="phone_email_wrapper">';
 			
@@ -156,6 +186,16 @@
 					echo '<nav id="email_address">';
 					
 					get_template_part( 'misc/emailaddress' );
+					
+					echo '</nav>';
+				
+				endif;
+				
+				if( get_field('additional_link','options') ):
+				
+					echo '<nav id="add_link">';
+					
+					get_template_part( 'misc/addlink' );
 					
 					echo '</nav>';
 				
@@ -204,6 +244,26 @@
 			echo '</div></div></div></div>';
 		
 		endif;
+		
+	elseif( get_field('top_bar_features', 'options') == 'custom' ):
+	
+		echo '<div id="top_bar">';
+		
+		if( get_field('select_a_custom_element') != 'none' && get_field('custom_element_location') == 'topbar' ):
+			
+			get_template_part( 'custom/customelements' );
+		
+		elseif( get_field('select_a_custom_element_2') != 'none' && get_field('custom_element_location_2') == 'topbar' ):
+			
+			get_template_part( 'custom/customelements2' );
+			
+		elseif( get_field('select_a_custom_element_3') != 'none' && get_field('custom_element_location_3') == 'topbar' ):
+			
+			get_template_part( 'custom/customelements3' );
+					
+		endif;
+		
+		echo '</div>';
 	
 	endif;
 

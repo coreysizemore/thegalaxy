@@ -26,18 +26,26 @@
 		get_template_part( 'misc/calloutboxes' );
 	
 	endif;
-	
-	if( get_field('select_a_custom_element') != 'none' && get_field('custom_element_location') == 'above' ):
-			
-		get_template_part( 'custom/customelements' );
-				
-	endif;
 
 	echo '<div id="main" class="';
 	
 	echo basename(get_permalink());
 	
 	echo '">';
+	
+	if( get_field('select_a_custom_element') != 'none' && get_field('custom_element_location') == 'above' ):
+			
+		get_template_part( 'custom/customelements' );
+	
+	elseif( get_field('select_a_custom_element_2') != 'none' && get_field('custom_element_location_2') == 'above' ):
+		
+		get_template_part( 'custom/customelements2' );
+		
+	elseif( get_field('select_a_custom_element_3') != 'none' && get_field('custom_element_location_3') == 'above' ):
+		
+		get_template_part( 'custom/customelements3' );
+				
+	endif;
 	
 	if( get_field('default_editor') == 'display'):
 	
@@ -52,7 +60,15 @@
 			if( get_field('select_a_custom_element') != 'none' && get_field('custom_element_location') == 'inside' ):
 			
 				get_template_part( 'custom/customelements' );
+			
+			elseif( get_field('select_a_custom_element_2') != 'none' && get_field('custom_element_location_2') == 'inside' ):
 				
+				get_template_part( 'custom/customelements2' );
+				
+			elseif( get_field('select_a_custom_element_3') != 'none' && get_field('custom_element_location_3') == 'inside' ):
+				
+				get_template_part( 'custom/customelements3' );
+						
 			endif;
 
 			if( have_rows('gallery_content') ):
@@ -80,6 +96,14 @@
 			if( get_field('select_a_custom_element') != 'none' && get_field('custom_element_location') == 'sidebar' ):
 			
 				get_template_part( 'custom/customelements' );
+			
+			elseif( get_field('select_a_custom_element_2') != 'none' && get_field('custom_element_location_2') == 'sidebar' ):
+				
+				get_template_part( 'custom/customelements2' );
+				
+			elseif( get_field('select_a_custom_element_3') != 'none' && get_field('custom_element_location_3') == 'sidebar' ):
+				
+				get_template_part( 'custom/customelements3' );
 						
 			endif;
 			
@@ -96,7 +120,15 @@
 			if( get_field('select_a_custom_element') != 'none' && get_field('custom_element_location') == 'inside' ):
 			
 				get_template_part( 'custom/customelements' );
+			
+			elseif( get_field('select_a_custom_element_2') != 'none' && get_field('custom_element_location_2') == 'inside' ):
 				
+				get_template_part( 'custom/customelements2' );
+				
+			elseif( get_field('select_a_custom_element_3') != 'none' && get_field('custom_element_location_3') == 'inside' ):
+				
+				get_template_part( 'custom/customelements3' );
+						
 			endif;
 			
 			if( have_rows('gallery_content') ):
@@ -130,6 +162,14 @@
 			if( get_field('select_a_custom_element') != 'none' && get_field('custom_element_location') == 'sidebar' ):
 			
 				get_template_part( 'custom/customelements' );
+			
+			elseif( get_field('select_a_custom_element_2') != 'none' && get_field('custom_element_location_2') == 'sidebar' ):
+				
+				get_template_part( 'custom/customelements2' );
+				
+			elseif( get_field('select_a_custom_element_3') != 'none' && get_field('custom_element_location_3') == 'sidebar' ):
+				
+				get_template_part( 'custom/customelements3' );
 						
 			endif;
 			
@@ -140,7 +180,15 @@
 			if( get_field('select_a_custom_element') != 'none' && get_field('custom_element_location') == 'inside' ):
 			
 				get_template_part( 'custom/customelements' );
+			
+			elseif( get_field('select_a_custom_element_2') != 'none' && get_field('custom_element_location_2') == 'inside' ):
 				
+				get_template_part( 'custom/customelements2' );
+				
+			elseif( get_field('select_a_custom_element_3') != 'none' && get_field('custom_element_location_3') == 'inside' ):
+				
+				get_template_part( 'custom/customelements3' );
+						
 			endif;
 		
 			if( have_rows('gallery_content') ):
@@ -169,6 +217,20 @@
 	
 	endif;
 	
+	if( get_field('select_a_custom_element') != 'none' && get_field('custom_element_location') == 'below' ):
+			
+		get_template_part( 'custom/customelements' );
+	
+	elseif( get_field('select_a_custom_element_2') != 'none' && get_field('custom_element_location_2') == 'below' ):
+		
+		get_template_part( 'custom/customelements2' );
+		
+	elseif( get_field('select_a_custom_element_3') != 'none' && get_field('custom_element_location_3') == 'below' ):
+		
+		get_template_part( 'custom/customelements3' );
+				
+	endif;
+	
 	if(is_user_logged_in()):
 	
 		echo '<div class="edit_button"><span class="edit">';
@@ -180,12 +242,6 @@
 	endif;
 	
 	echo '</div>';
-	
-	if( get_field('select_a_custom_element') != 'none' && get_field('custom_element_location') == 'below' ):
-			
-		get_template_part( 'custom/customelements' );
-				
-	endif;
 	
 	get_template_part( 'misc/parallax' );
 

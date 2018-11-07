@@ -259,7 +259,8 @@ a#searchclose:visited {
 		
 		#phone_number,
 		#email_address,
-		#social_nav {
+		#social_nav,
+		#add_link {
 			display: inline-block;
 			vertical-align: top;
 			
@@ -290,13 +291,14 @@ a#searchclose:visited {
 		}
 		
 		#phone_number,
-		#email_address {
-			padding-left: 20px;
-			
+		#email_address,
+		#add_link {
 			ul {
 				li {
 					a:link,
 					a:visited {
+						padding-right: 20px;
+						
 						.fas {
 							font-size: 14px;
 							margin-right: 6px;
@@ -333,6 +335,14 @@ a#searchclose:visited {
 		&.include_sm {
 			#social_nav {
 				width: 100%;
+			}
+		}
+	}
+	
+	&.fullwidth {
+		.phone_email_wrapper {
+			nav:first-child {
+				padding-left: 20px;	
 			}
 		}
 	}
@@ -1850,6 +1860,12 @@ header#header_page_mobile {
 		margin-bottom: 40px;
 		padding: 30px;
 		@include border-radius(5px);
+		
+		img {
+			height: auto;
+			margin-bottom: 40px;
+			width: 100%;
+		}
 	
 		ul.business_hours {
 			margin-bottom: 30px;
@@ -1891,6 +1907,38 @@ header#header_page_mobile {
 					line-height: 28px;
 				}
 			}	
+		}
+		
+		ul.sidebar_links {
+			margin-top: 40px;
+			
+			li {
+				margin-bottom: 10px;
+				
+				a:link,
+				a:visited {
+					background: $colortwo;
+					color: $light_font;
+					display: block;
+					font-weight: 600;
+					font-size: 14px;
+					letter-spacing: 2px;
+					padding: 8px 20px;
+					text-align: center;
+					text-transform: uppercase;
+					text-decoration: none;
+					@include border-radius(5px);
+					@include transition(.1s);
+					
+					.fas {
+						margin: 0px;
+					}
+				}
+			}
+			
+			li:last-child {
+				margin-bottom: 0px;
+			}
 		}
 	}
 	

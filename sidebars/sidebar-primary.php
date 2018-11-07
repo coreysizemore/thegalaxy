@@ -21,6 +21,14 @@
 							
 			echo '<div class="business_information_wrapper">';
 			
+			if( get_field('sidebar_logo', 'options')):
+			
+				$image = get_field('sidebar_logo', 'options');
+				
+				echo '<img src="' . $image['url'] . '" alt="' . $image['alt'] . '" />';
+			
+			endif;
+			
 			if( get_field('hours_title', 'options')):
 			
 				echo '<h3>';
@@ -146,6 +154,46 @@
 			endif;
 				
 			echo '</nav>';
+			
+			$sidebarlinks = get_field('sidebar_links','option');
+							
+			if( $sidebarlinks ):
+			
+				echo '<ul class="sidebar_links">';
+						
+				foreach( $sidebarlinks as $link ):
+				
+					echo '<li>';
+				
+					if( $link['link_type'] == 'internal' ):
+					
+						echo '<a href="' . $link['internal_link'] . '">';
+					
+					elseif( $link['link_type'] == 'external' ):
+					
+						echo '<a href="' . $link['external_link'] . '" target="_blank">';
+					
+					endif;
+					
+					if( $link['link_display_text'] ):
+					
+						echo $link['link_display_text'];
+						
+					else :
+					
+						echo 'Default Button';
+					
+					endif;
+					
+					echo '</a>';
+					
+					echo '</li>';
+																				
+				endforeach;
+				
+				echo '</ul>';
+											
+			endif;
 			
 			echo '</div>';			
 			

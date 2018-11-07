@@ -17,7 +17,31 @@
 		
 		echo home_url('wp-admin');
 		
-		echo '">Admin Login</a> | <span class="designedby">Designed by <a href="http://www.coreysizemore.com" target="_blank">CSDD</a></span></p></div><nav id="social_nav">';
+		echo '">Admin Login</a>';
+		
+		if( get_field('utilize_custom_copyright_link', 'options') == 'utilize'):
+		
+			echo ' | ';
+			
+			echo '<a href="';
+			
+			echo the_field('custom_copyright_link_url', 'options');
+			
+			echo '" target="_blank">';
+			
+			echo the_field('custom_copyright_link_display_text', 'options');
+			
+			echo '</a>';
+			
+			echo ' | ';
+		
+		else :
+		
+			echo ' | ';
+		
+		endif;
+		
+		echo '<span class="designedby">Designed by <a href="http://www.coreysizemore.com" target="_blank">CSDD</a></span></p></div><nav id="social_nav">';
 		
 		get_template_part( 'misc/sociallinks' );
 			
@@ -33,7 +57,31 @@
 		
 		echo home_url('wp-admin');
 		
-		echo '">Admin Login</a> | <span class="designedby">Designed by <a href="http://www.coreysizemore.com" target="_blank">CSDD</a></span></p></div><nav id="social_nav">';
+		echo '">Admin Login</a>';
+		
+		if( get_field('utilize_custom_copyright_link', 'options') == 'utilize'):
+		
+			echo ' | ';
+			
+			echo '<a href="';
+			
+			echo the_field('custom_copyright_link_url', 'options');
+			
+			echo '" target="_blank">';
+			
+			echo the_field('custom_copyright_link_display_text', 'options');
+			
+			echo '</a>';
+			
+			echo ' | ';
+		
+		else :
+		
+			echo ' | ';
+		
+		endif;
+		
+		echo '<span class="designedby">Designed by <a href="http://www.coreysizemore.com" target="_blank">CSDD</a></span></p></div><nav id="social_nav">';
 		
 		get_template_part( 'misc/sociallinks' );
 			
