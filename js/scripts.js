@@ -16,6 +16,14 @@ $(document).ready(function() {
 		  }
 	});
 	
+	/* home page promo */
+	
+	if ($('#promo').length > 0) {
+	
+		$('#promo').click();
+		
+	}
+	
 	/* search & mobile nav */
 	
 	$('a#searchopen').click( function() { 

@@ -6,7 +6,7 @@ GitHub Branch: master
 Author: Corey Sizemore
 Author URI: http://www.coreysizemore.com
 Description: Modern website theme with multiple design choices. Check out http://www.coreysizemore.com for more information about getting a website built in this theme. Not currently avaliable for public use.
-Version: v2.1.0
+Version: v2.1.1
 Text Domain:  thegalaxy
 */
 
@@ -68,13 +68,16 @@ Text Domain:  thegalaxy
 
 .content .wp-caption.alignnone {
     margin: 5px 20px 20px 0;
+    width: 100% !important;
 }
 
 .content .wp-caption.alignleft {
+	float: left;
     margin: 5px 20px 20px 0;
 }
 
 .content .wp-caption.alignright {
+	float: right;
     margin: 5px 0 20px 20px;
 }
 
@@ -87,9 +90,14 @@ Text Domain:  thegalaxy
     width: auto;
 }
 
+.content .wp-caption.alignnone img {
+	height: auto;
+	width: 100%;
+}
+
 .content .wp-caption p.wp-caption-text {
-    font-size: 11px;
-    line-height: 17px;
+    font-size: 14px;
+    line-height: 22px;
     margin: 0;
     padding: 0 4px 5px;
 }

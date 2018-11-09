@@ -7,9 +7,11 @@
 	//Enqueue scripts and styles.
 	function csdd_scripts() 
 	{	
-		wp_enqueue_style( 'google-font-one', 'https://fonts.googleapis.com/css?family=Hind:300,400,500,600,700&amp;subset=latin-ext' );
+		wp_enqueue_style( 'google-font-one', 'https://fonts.googleapis.com/css?family=Hind:400,600,700' );
 		
-		wp_enqueue_style( 'google-font-two', 'https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&amp;subset=latin-ext' );
+		wp_enqueue_style( 'google-font-two', 'https://fonts.googleapis.com/css?family=Poppins:300,400,400i,500,600,700' );
+		
+		wp_enqueue_style( 'google-font-three', 'https://fonts.googleapis.com/css?family=Merriweather:300,400,400i,700' );
 		
 		wp_enqueue_style( 'font-awesome', 'https://use.fontawesome.com/releases/v5.3.1/css/all.css' );
 		

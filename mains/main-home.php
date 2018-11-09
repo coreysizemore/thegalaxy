@@ -254,4 +254,10 @@
 		endif;
 		
 	endif;
+	
+	if( get_field('promotion_pop_up','options') ):
+	
+		get_template_part( 'misc/promopopup' );
+	
+	endif;
 ?>

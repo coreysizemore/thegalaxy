@@ -8,7 +8,7 @@
 					        
 		the_sub_field('gallery_image');
 				
-		echo '" class="fancybox" rel="group"><div class="filter"><span class="icon icon-expand"></span></div><img src="';
+		echo '" class="fancybox" rel="group"><div class="filter"><span class="fas fa-expand-arrows-alt"></span></div><img src="';
 				
 		the_sub_field('gallery_image');
 					
