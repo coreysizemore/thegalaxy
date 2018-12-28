@@ -23,17 +23,47 @@
 			
 		endif;
 		
-		if ( has_nav_menu( 'home_page_nav' ) ):
+		if( get_field('home_navigation_style', 'options') == 'default'):
 		
-			echo '<div id="home_page_nav">';
-					
-			wp_nav_menu( array( 'theme_location' => 'home_page_nav' ) );
-					
-			echo '</div>';
+			if ( has_nav_menu( 'home_page_nav' ) ):
+			
+				echo '<nav id="home_page_nav">';
+						
+				wp_nav_menu( array( 'theme_location' => 'home_page_nav' ) );
+						
+				echo '</nav>';
+			
+			endif;
 		
 		endif;
 		
 		echo '</div>';
+		
+		if( get_field('home_navigation_style', 'options') == 'bottom' || get_field('home_navigation_style', 'options') == 'top' ):
+			
+			$menu = wp_get_nav_menu_object( 'home' );
+				
+			$menuitems = $menu->count;
+		
+			if ( has_nav_menu( 'home_page_nav' ) ):
+			
+				if( get_field('home_navigation_style', 'options') == 'top' ):
+			
+					echo '<nav id="top_home_page_nav" class="menu-items-' . $menuitems . '">';
+				
+				elseif( get_field('home_navigation_style', 'options') == 'bottom' ):
+				
+					echo '<nav id="bottom_home_page_nav" class="menu-items-' . $menuitems . '">';
+					
+				endif;
+						
+				wp_nav_menu( array( 'theme_location' => 'home_page_nav' ) );
+						
+				echo '</nav>';
+			
+			endif;
+		
+		endif;
 		
 	elseif( get_field('home_logo', 'options') == 'imagetext'):
 	
@@ -63,17 +93,47 @@
 			
 		endif;
 		
-		if ( has_nav_menu( 'home_page_nav' ) ):
+		if( get_field('home_navigation_style', 'options') == 'default'):
 		
-			echo '<div id="home_page_nav">';
-					
-			wp_nav_menu( array( 'theme_location' => 'home_page_nav' ) );
-					
-			echo '</div>';
+			if ( has_nav_menu( 'home_page_nav' ) ):
+			
+				echo '<nav id="home_page_nav">';
+						
+				wp_nav_menu( array( 'theme_location' => 'home_page_nav' ) );
+						
+				echo '</nav>';
+			
+			endif;
 		
 		endif;
 		
 		echo '</div>';
+		
+		if( get_field('home_navigation_style', 'options') == 'bottom' || get_field('home_navigation_style', 'options') == 'top' ):
+			
+			$menu = wp_get_nav_menu_object( 'home' );
+				
+			$menuitems = $menu->count;
+		
+			if ( has_nav_menu( 'home_page_nav' ) ):
+			
+				if( get_field('home_navigation_style', 'options') == 'top' ):
+			
+					echo '<nav id="top_home_page_nav" class="menu-items-' . $menuitems . '">';
+				
+				elseif( get_field('home_navigation_style', 'options') == 'bottom' ):
+				
+					echo '<nav id="bottom_home_page_nav" class="menu-items-' . $menuitems . '">';
+					
+				endif;
+						
+				wp_nav_menu( array( 'theme_location' => 'home_page_nav' ) );
+						
+				echo '</nav>';
+			
+			endif;
+		
+		endif;
 	
 	elseif( get_field('home_logo', 'options') == 'text'):
 	
@@ -89,33 +149,93 @@
 			
 		endif;
 		
-		if ( has_nav_menu( 'home_page_nav' ) ):
+		if( get_field('home_navigation_style', 'options') == 'default'):
 		
-			echo '<div id="home_page_nav">';
-					
-			wp_nav_menu( array( 'theme_location' => 'home_page_nav' ) );
-					
-			echo '</div>';
+			if ( has_nav_menu( 'home_page_nav' ) ):
+			
+				echo '<nav id="home_page_nav">';
+						
+				wp_nav_menu( array( 'theme_location' => 'home_page_nav' ) );
+						
+				echo '</nav>';
+			
+			endif;
 		
 		endif;
 		
 		echo '</div>';
+		
+		if( get_field('home_navigation_style', 'options') == 'bottom' || get_field('home_navigation_style', 'options') == 'top' ):
+			
+			$menu = wp_get_nav_menu_object( 'home' );
+				
+			$menuitems = $menu->count;
+		
+			if ( has_nav_menu( 'home_page_nav' ) ):
+			
+				if( get_field('home_navigation_style', 'options') == 'top' ):
+			
+					echo '<nav id="top_home_page_nav" class="menu-items-' . $menuitems . '">';
+				
+				elseif( get_field('home_navigation_style', 'options') == 'bottom' ):
+				
+					echo '<nav id="bottom_home_page_nav" class="menu-items-' . $menuitems . '">';
+					
+				endif;
+						
+				wp_nav_menu( array( 'theme_location' => 'home_page_nav' ) );
+						
+				echo '</nav>';
+			
+			endif;
+		
+		endif;
 		
 	else :
 	
 		echo '<div id="home_logo" class="home_logo_mobile">';
 	
-		if ( has_nav_menu( 'home_page_nav' ) ):
+		if( get_field('home_navigation_style', 'options') == 'default'):
 		
-			echo '<div id="home_page_nav">';
-					
-			wp_nav_menu( array( 'theme_location' => 'home_page_nav' ) );
-					
-			echo '</div>';
+			if ( has_nav_menu( 'home_page_nav' ) ):
+			
+				echo '<nav id="home_page_nav">';
+						
+				wp_nav_menu( array( 'theme_location' => 'home_page_nav' ) );
+						
+				echo '</nav>';
+			
+			endif;
 		
 		endif;
 		
 		echo '</div>';
+		
+		if( get_field('home_navigation_style', 'options') == 'bottom' || get_field('home_navigation_style', 'options') == 'top' ):
+			
+			$menu = wp_get_nav_menu_object( 'home' );
+				
+			$menuitems = $menu->count;
+		
+			if ( has_nav_menu( 'home_page_nav' ) ):
+			
+				if( get_field('home_navigation_style', 'options') == 'top' ):
+			
+					echo '<nav id="top_home_page_nav" class="menu-items-' . $menuitems . '">';
+				
+				elseif( get_field('home_navigation_style', 'options') == 'bottom' ):
+				
+					echo '<nav id="bottom_home_page_nav" class="menu-items-' . $menuitems . '">';
+					
+				endif;
+						
+				wp_nav_menu( array( 'theme_location' => 'home_page_nav' ) );
+						
+				echo '</nav>';
+			
+			endif;
+		
+		endif;
 	
 	endif;
 	

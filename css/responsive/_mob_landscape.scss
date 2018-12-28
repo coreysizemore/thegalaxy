@@ -73,6 +73,22 @@
 				}
 			}
 		}
+		
+		#top_home_page_nav,
+		#bottom_home_page_nav {
+			&.menu-items-1,
+			&.menu-items-2,
+			&.menu-items-3,
+			&.menu-items-4,
+			&.menu-items-5 {
+				ul {
+					li {
+						float: none;
+						width: 100%;
+					}
+				}
+			}
+		}
 	}
 	
 	/* search */

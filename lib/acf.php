@@ -1237,10 +1237,10 @@ acf_add_local_field_group(array(
 		),
 		array(
 			'key' => 'field_58ec00ba95910',
-			'label' => 'Home Page Logo / Text / Navigation Location',
+			'label' => 'Home Page Logo / Text Location',
 			'name' => 'home_logo_location',
 			'type' => 'button_group',
-			'instructions' => 'Select how you want the home logo, site description, and home page menu aligned. Left, Center, Right are the options.',
+			'instructions' => 'Select how you want the home logo, site description, and home page menu aligned. Top, Left, Center, Right, Bottom are the options. Navigation will be included if "Default" is selected below.',
 			'required' => 0,
 			'conditional_logic' => array(
 				array(
@@ -1284,6 +1284,29 @@ acf_add_local_field_group(array(
 			),
 			'allow_null' => 0,
 			'default_value' => 'center',
+			'layout' => 'horizontal',
+			'return_format' => 'value',
+		),
+		array(
+			'key' => 'field_5beb97ad33198',
+			'label' => 'Home Page Navigation Style',
+			'name' => 'home_navigation_style',
+			'type' => 'button_group',
+			'instructions' => 'Select your home page navigation styling here. Navigation will only exist if menu items are placed into that menu on the menu page. Default is the generic buttons below the logo/text combo, or top/bottom will be full width buttons at the top or the bottom of the screen.',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'choices' => array(
+				'default' => 'Default',
+				'top' => 'Top',
+				'bottom' => 'Bottom',
+			),
+			'allow_null' => 0,
+			'default_value' => 'default',
 			'layout' => 'horizontal',
 			'return_format' => 'value',
 		),
