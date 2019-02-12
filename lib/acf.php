@@ -1010,6 +1010,46 @@ acf_add_local_field_group(array(
 			'max_size' => '',
 			'mime_types' => '',
 		),
+		array(
+			'key' => 'field_5c6218a68c8e5',
+			'label' => 'Meta Data',
+			'name' => '',
+			'type' => 'tab',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'placement' => 'left',
+			'endpoint' => 0,
+		),
+		array(
+			'key' => 'field_5c6218c78c8e6',
+			'label' => 'Preview Image',
+			'name' => 'preview_image',
+			'type' => 'image',
+			'instructions' => 'Custom image that will be used for Social Media pages and other preview link images on different platforms.',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'return_format' => 'url',
+			'preview_size' => 'thumbnail',
+			'library' => 'all',
+			'min_width' => '',
+			'min_height' => '',
+			'min_size' => '',
+			'max_width' => '',
+			'max_height' => '',
+			'max_size' => '',
+			'mime_types' => '',
+		),
 	),
 	'location' => array(
 		array(
@@ -1026,7 +1066,7 @@ acf_add_local_field_group(array(
 	'label_placement' => 'top',
 	'instruction_placement' => 'label',
 	'hide_on_screen' => '',
-	'active' => 1,
+	'active' => true,
 	'description' => '',
 ));
 
@@ -2082,6 +2122,55 @@ acf_add_local_field_group(array(
 			'maxlength' => '',
 		),
 		array(
+			'key' => 'field_5c56374c2a07f',
+			'label' => 'Utilize Custom Author',
+			'name' => 'utilize_custom_author',
+			'type' => 'button_group',
+			'instructions' => 'Add a custom author into the copyright area of the website.',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'choices' => array(
+				'utilize' => 'Utilize',
+				'none' => 'None',
+			),
+			'allow_null' => 0,
+			'default_value' => 'none',
+			'layout' => 'horizontal',
+			'return_format' => 'value',
+		),
+		array(
+			'key' => 'field_5c5637b32a080',
+			'label' => 'Custom Copyright Author',
+			'name' => 'custom_copyright_author',
+			'type' => 'text',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => array(
+				array(
+					array(
+						'field' => 'field_5c56374c2a07f',
+						'operator' => '==',
+						'value' => 'utilize',
+					),
+				),
+			),
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'placeholder' => '',
+			'prepend' => '',
+			'append' => '',
+			'maxlength' => '',
+		),
+		array(
 			'key' => 'field_5bd0fbf70c68c',
 			'label' => 'Custom Scripts',
 			'name' => 'custom_scripts',
@@ -2298,6 +2387,11 @@ acf_add_local_field_group(array(
 				'operator' => '==',
 				'value' => 'theme-settings',
 			),
+			array(
+				'param' => 'current_user_role',
+				'operator' => '==',
+				'value' => 'administrator',
+			),
 		),
 	),
 	'menu_order' => 0,
@@ -2306,7 +2400,7 @@ acf_add_local_field_group(array(
 	'label_placement' => 'top',
 	'instruction_placement' => 'label',
 	'hide_on_screen' => '',
-	'active' => 1,
+	'active' => true,
 	'description' => '',
 ));
 
@@ -2370,7 +2464,7 @@ acf_add_local_field_group(array(
 	'label_placement' => 'top',
 	'instruction_placement' => 'label',
 	'hide_on_screen' => '',
-	'active' => 1,
+	'active' => true,
 	'description' => '',
 ));
 
@@ -2694,7 +2788,7 @@ acf_add_local_field_group(array(
 	'label_placement' => 'top',
 	'instruction_placement' => 'label',
 	'hide_on_screen' => '',
-	'active' => 1,
+	'active' => true,
 	'description' => '',
 ));
 
@@ -3155,7 +3249,7 @@ acf_add_local_field_group(array(
 	'label_placement' => 'top',
 	'instruction_placement' => 'label',
 	'hide_on_screen' => '',
-	'active' => 1,
+	'active' => true,
 	'description' => '',
 ));
 

@@ -53,7 +53,7 @@
 	
 	endif;
 	
-	echo csdd_the_title();
+	echo get_the_title();
 		
 	echo '</h1>';
 
@@ -85,7 +85,7 @@
 	
 	echo '<div id="page_title"><h1 class="heading">';
 	
-	echo csdd_the_title();
+	echo get_the_title();
 		
 	echo '</h1>';
 

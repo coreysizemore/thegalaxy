@@ -15,6 +15,20 @@
 
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
 	<meta http-equiv="Expires" content="30" />
+	
+	<?php
+		
+		if( get_field('preview_image', 'options') ):
+		
+			echo '<meta property="og:image" content="';
+			
+			echo the_field('preview_image', 'options');
+			
+			echo '" />';
+		
+		endif;
+		
+	?>
         
 	<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
 	<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->

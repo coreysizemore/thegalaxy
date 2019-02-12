@@ -41,7 +41,19 @@
 		
 		endif;
 		
-		echo '<span class="designedby">Designed by <a href="http://www.coreysizemore.com" target="_blank">CSDD</a></span></p></div><nav id="social_nav">';
+		echo '<span class="designedby">';
+		
+		if( get_field('utilize_custom_author', 'options') == 'utilize'):
+		
+			echo the_field('custom_copyright_author', 'options');
+		
+		else :
+		
+			echo 'Designed by <a href="http://www.coreysizemore.com" target="_blank">CSDD</a>';
+			
+		endif;
+		
+		echo '</span></p></div><nav id="social_nav">';
 		
 		get_template_part( 'misc/sociallinks' );
 			
