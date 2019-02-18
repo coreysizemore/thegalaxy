@@ -11,7 +11,7 @@
 
 	<article class="blog_entry" id="post-<?php the_ID(); ?>">
                                 
-		<h1 class="entry_title"><?php csdd_the_title(); ?></h1>
+		<h1 class="entry_title"><?php echo get_the_title(); ?></h1>
 		
 		<div class="meta">
 		

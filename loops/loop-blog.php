@@ -25,7 +25,7 @@
 			
 		?>
                                 
-		<h2 class="entry-title"><a href="<?php the_permalink() ?>" title="Permanent Link to <?php the_title(); ?>"><?php echo wp_trim_words( get_the_title(), 6, '...' ); ?></a></h2>
+		<h2 class="entry-title"><a href="<?php the_permalink() ?>" title="Permanent Link to <?php echo get_the_title(); ?>"><?php echo wp_trim_words( get_the_title(), 6, '...' ); ?></a></h2>
 		
 		<span class="date"><?php echo get_the_date(); ?></span>
 	                   
