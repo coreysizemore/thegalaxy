@@ -5,7 +5,7 @@
 	*/
 	
 	//Enqueue scripts and styles.
-	function csdd_scripts() 
+	function galaxy_scripts() 
 	{	
 		wp_enqueue_style( 'google-font-one', 'https://fonts.googleapis.com/css?family=Hind:400,600,700' );
 		
@@ -15,9 +15,9 @@
 		
 		wp_enqueue_style( 'font-awesome', 'https://use.fontawesome.com/releases/v5.3.1/css/all.css' );
 		
-		wp_enqueue_style( 'csdd-style', get_stylesheet_uri() );
+		wp_enqueue_style( 'galaxy-style', get_stylesheet_uri() );
 		
-		wp_enqueue_style( 'csdd-styles', get_template_directory_uri() . '/css/styles.css' );
+		wp_enqueue_style( 'galaxy-styles', get_template_directory_uri() . '/css/styles.css' );
 		
 		wp_enqueue_style( 'fancybox', get_template_directory_uri() . '/fancybox/fancybox.css' );
 		
@@ -29,10 +29,10 @@
 		
 		wp_enqueue_script( 'fancybox', get_template_directory_uri() . '/fancybox/fancybox.min.js' );
 	
-		wp_enqueue_script( 'csdd-scripts', get_template_directory_uri() . '/js/scripts.min.js' );
+		wp_enqueue_script( 'galaxy-scripts', get_template_directory_uri() . '/js/scripts.min.js' );
 	}
 	
-	add_action( 'wp_enqueue_scripts', 'csdd_scripts' );
+	add_action( 'wp_enqueue_scripts', 'galaxy_scripts' );
 
 	// register menus
 	function register_my_menus() {

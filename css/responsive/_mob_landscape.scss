@@ -230,4 +230,18 @@
 		}
 	}
 	
+	.content .alignright,
+	.content .alignleft,
+	.content a img.alignright,
+	.content a img.alignnone,
+	.content a img.alignleft {
+	    width: 50%;
+	    height: auto;
+	}
+	
+	.content iframe {
+		width: 100%;
+		height: 300px;
+	}
+	
 }
