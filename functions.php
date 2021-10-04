@@ -10,7 +10,7 @@
 	require_once locate_template('/lib/logo.php');
 	require_once locate_template('/lib/acf.php');
 	
-	require 'plugin-update-checker/plugin-update-checker.php';
+	require 'update-checker/plugin-update-checker.php';
 	$myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
 		'https://github.com/coreysizemore/thegalaxy/',
 		__FILE__,
