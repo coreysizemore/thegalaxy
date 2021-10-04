@@ -13,8 +13,6 @@
 		
 		wp_enqueue_style( 'google-font-three', 'https://fonts.googleapis.com/css?family=Merriweather:300,400,400i,700' );
 		
-		wp_enqueue_style( 'font-awesome', 'https://use.fontawesome.com/releases/v5.3.1/css/all.css' );
-		
 		wp_enqueue_style( 'galaxy-style', get_stylesheet_uri() );
 		
 		wp_enqueue_style( 'galaxy-styles', get_template_directory_uri() . '/css/styles.css' );
@@ -28,6 +26,8 @@
 		wp_enqueue_script( 'scroll-fix', get_template_directory_uri() . '/js/scrollfix.min.js' );
 		
 		wp_enqueue_script( 'fancybox', get_template_directory_uri() . '/fancybox/fancybox.min.js' );
+		
+		wp_enqueue_script( 'font-awesome', 'https://kit.fontawesome.com/e9acb201c8.js' );
 	
 		wp_enqueue_script( 'galaxy-scripts', get_template_directory_uri() . '/js/scripts.min.js' );
 	}
@@ -72,8 +72,6 @@
 		}
 	}
 	add_action('after_setup_theme', 'remove_admin_bar');
-	
-	add_action( 'wp_enqueue_scripts', 'myphpinformation_scripts' );
 	
 	function remove_toolbar_items($wp_adminbar) {
 		$wp_adminbar->remove_node('wpseo-menu');
