@@ -2363,6 +2363,10 @@ article.blog_entry {
 	background-attachment: fixed;
 	height: 350px;
 	
+	&.parallax_tall {
+		height: 400px;
+	}
+	
 	.filter {
 		background: rgba($colortwo,.5);
 		display: block;
@@ -2386,37 +2390,30 @@ article.blog_entry {
 			text-align: center;
 		}
 		
-		.testimonials-widget-testimonials {
-			.prepend,
-			.append {
-				display: none;
-			}
+		.testimonial {
 			
-			p {
-				font-weight: 500;
-			}
-			
-			div.credit {
-				margin: 0px;
+			span {
+				display: block;
 				
-				span.author {
-					color: #ffffff;
-					display: block;
-					font-size: 14px;
-					font-weight: 300;
-					text-align: center;
-					width: 100%;
-					
-					&::before {
-						content: "- ";
-						color: #ffffff;
-						font-size: 14px;
+				&.test-rating {
+					margin-bottom: 15px;
+					i {
+						font-size: 30px;
 					}
 				}
-			}
-			
-			div.credit::before {
-				display: none;
+				
+				&.test-content {
+					font-size: 22px;
+					margin-bottom: 10px;
+				}
+				
+				&.test-author {
+					font-weight: 600;
+				}
+				
+				&.test-date {
+					font-size: 16px;
+				}
 			}
 		}
 	}
